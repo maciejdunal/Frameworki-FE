@@ -11,7 +11,7 @@ const boxShadow = (): Styles => {
     }
 }
 
-export const Wrapper = styled.div`\;
+export const Wrapper = styled.div`;
     box-sizing: border-box;
     margin: 0;
     padding: 0;

@@ -18,7 +18,7 @@ import {TextField} from "@material-ui/core";
 
 const InnerWrapper = styled.div`;
     background: ${Colors.grey};
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
