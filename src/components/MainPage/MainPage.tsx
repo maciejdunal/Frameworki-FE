@@ -8,20 +8,18 @@ import { Colors } from '../../styledHelpers/Colors';
 
 
 const Content = styled.div`
-max-width: 1200px;
-align-items: center;
-display: flex;
+    align-items: center;
+    display: flex;
+  background: ${Colors.black};
 `;
 
 const MainPage: FC = () => {
     return (
         <Wrapper>
-            <TopBar>
-            </TopBar>
-            <Content>g
-                <LeftMenu>
-                </LeftMenu>
-                <div>content</div>
+            <TopBar/>
+            <Content>
+                <LeftMenu/>
+                <div></div>
             </Content>
         </Wrapper>
     );
