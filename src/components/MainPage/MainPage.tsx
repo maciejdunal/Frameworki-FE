@@ -5,12 +5,14 @@ import { TopBar } from '../TopBar/TopBar';
 import { LeftMenu } from '../LeftMenu/LeftMenu';
 import { Wrapper } from '../../styledHelpers/Components';
 import { Colors } from '../../styledHelpers/Colors';
+import {HomePage} from "../HomePage/HomePage";
+import {Home} from "@material-ui/icons";
 
 
 const Content = styled.div`
-    align-items: center;
-    display: flex;
-  background: ${Colors.black};
+  height: 1000px;
+  display: flex;
+  background: #edeaea;
 `;
 
 const MainPage: FC = () => {
@@ -19,7 +21,7 @@ const MainPage: FC = () => {
             <TopBar/>
             <Content>
                 <LeftMenu/>
-                <div></div>
+                <HomePage/>
             </Content>
         </Wrapper>
     );
