@@ -1,0 +1,45 @@
+
+/*------------------paginate------------------*/
+.paginate {
+    margin: 15px auto;
+    display: flex;
+    list-style: none;
+    outline: none;
+    margin-left: 450px;
+}
+.paginate > .active > a{
+    color: black;
+}
+.paginate > li > a{
+
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.paginate > li > a, .paginate > li > span {
+    color: #2678ba;
+}
+
+.menu-item {
+
+    margin-left: 10px;
+    user-select: none;
+    cursor: pointer;
+    border: none;
+}
+.menu-item-wrapper.active {
+}
+.menu-item.active {
+}
+
+.scroll-menu-arrow {
+
+    cursor: pointer;
+}
+
+workspaces > a {
+    box-shadow: 0px 2px #d8dbe1;
+    border-left: 10px solid #d8dbe1;
+    border-right: 10px solid #d8dbe1;
+}
