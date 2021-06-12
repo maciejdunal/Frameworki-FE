@@ -7,7 +7,22 @@ import { Wrapper } from '../../styledHelpers/Components';
 import { Colors } from '../../styledHelpers/Colors';
 import {HomePage} from "../HomePage/HomePage";
 import {Home} from "@material-ui/icons";
+import ScrollMenu from 'react-horizontal-scrolling-menu';
+import './MainPage.css';
 
+
+import{
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import {Profile} from "../Profile/Profile";
+import {Entities} from "../common/entities";
+import {YourNetwork} from "../common/yourNetwork";
+import {YourPublications} from "../common/yourPublications";
+import {Publications} from "../common/publications";
+import {Ecosystem} from "../common/ecosystem";
 
 const Content = styled.div`
   height: 1000px;
@@ -17,13 +32,39 @@ const Content = styled.div`
 
 const MainPage: FC = () => {
     return (
+        <Router>
         <Wrapper>
             <TopBar/>
             <Content>
                 <LeftMenu/>
-                <HomePage/>
+
+                <Switch>
+
+                    <Route path="/entities" exact>
+                        <Entities/>
+                    </Route>
+                    <Route path="/ecosystem" exact>
+                        <Ecosystem/>
+                    </Route>
+                    <Route path="/publications" exact>
+                        <Publications/>
+                    </Route>
+                    <Route path="/yourPublications" exact>
+                        <YourPublications/>
+                    </Route>
+                    <Route path="/yourNetwork" exact>
+                        <YourNetwork/>
+                    </Route>
+                    <Route path="/profile" exact>
+                        <Profile/>
+                    </Route>
+
+                    <HomePage/>
+                </Switch>
+
             </Content>
         </Wrapper>
+        </Router>
     );
 };
 

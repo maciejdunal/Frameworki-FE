@@ -30,7 +30,7 @@ const InnerWrapper = styled.div`
 const RightIcons = styled.div`
   display: grid;
   grid-template-columns: repeat(5,auto);
-  grid-gap: 10px;
+  grid-gap: 20px;
 
 `;
 
@@ -92,7 +92,7 @@ export const TopBar: FC = () => {
             <InnerWrapper>
 
                 <LeftLogo>
-                    <img src={logo} alt="logo" height="40px" />
+                    <a href="/HomePage"><img src={logo} alt="logo" height="40px" /></a>
                 </LeftLogo>
                 <MenuWrapper ref={wrapperRef}>
                     <LeftSide onClick={menuHandler}>
@@ -115,7 +115,7 @@ export const TopBar: FC = () => {
                 </InputWrapper>
 
                 <RightIcons>
-                    <img src={house} alt="house"/>
+                    <img src={house} style={{backgroundColor: "lightgray", border:"25px", borderRadius:"10px"}} alt="house"/>
                     <img src={comments} alt="comments"/>
                     <img src={bell} alt="bell"/>
                 </RightIcons>
