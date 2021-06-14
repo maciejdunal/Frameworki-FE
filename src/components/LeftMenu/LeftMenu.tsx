@@ -126,7 +126,7 @@ export const LeftMenu: FC = () => {
                 <div>
                     <button style={{border:'none', background:'none', marginTop:'10px',cursor:'pointer', outline:'none'}}>
                         <img src = {entities2} alt = {entities2}/>
-                        <a href="/Entities" style={{color:"#555b70", marginLeft:'20px', fontSize:'14px',fontWeight: "bold", textDecoration:'none'}}>Entities</a>
+                        <a href="/Entities" style={{color:"#555b70", marginLeft:'25px', fontSize:'14px',fontWeight: "bold", textDecoration:'none'}}>Entities</a>
                     </button>
                 </div>
 

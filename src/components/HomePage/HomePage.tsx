@@ -8,7 +8,9 @@ import {ExpandedMenu} from "../HomePage/ExpandedMenu";
 import ReactPaginate from 'react-paginate';
 import {Scrollws} from './scrollMenu'
 import search from "../../media//icons/search.png";
-import arrowDown from "../../media//icons/arrow-down.png"
+import followed from "../../media//icons/followed.png"
+import followed2 from "../../media//icons/followed2.png"
+import arrowdown from '../../media/icons/arrow-down.png';
 import profile from '../../media/icons/profile-example.png';
 import skyscrapers from '../../media/images/skyscrapers.png';
 import supplierContract from '../../media/images/supplierContract.png';
@@ -25,7 +27,7 @@ const LatestPublications = styled.div`
   border-radius: 5px;
   font-family: Arial, sans-serif;
   box-shadow: 0px 2px #d8dbe1;
-  border-leftr: 1px solid #d8dbe1;
+  border-left: 1px solid #d8dbe1;
   border-right: 1px solid #d8dbe1;
 `;
 
@@ -94,30 +96,30 @@ export const HomePage: FC = () => {
                     color: 'white',
                     fontSize: '15px',
                     position: 'absolute',
-                    marginLeft: '-360px',
-                    marginTop: '250px',
+                    marginLeft: '-315px',
+                    marginTop: '270px',
                     maxWidth: "250px"
 
-                }}>Lorem inpsum dolor sit amet, consecteur adipisiscing elit... and one more line for the
-                    demo <br/> elit... and one more line for the demo</a>
+                }}>Lorem inpsum dolor sit amet, consecteur adipisiscing elit... and <br/> one more line for the
+                    demo  </a>
                 <a style={{
                     fontSize: '11px',
                     position: 'absolute',
-                    marginLeft: '-360px',
+                    marginLeft: '-315px',
                     marginTop: '325px',
                     maxWidth: "250px",
-                    color: "#7f838f"
+                    color: "#caccd3"
                 }}>7 jan. 2020</a>
                 <a style={{
                     fontSize: '11px',
                     position: 'absolute',
-                    marginLeft: '-262px',
+                    marginLeft: '-216px',
                     marginTop: '325px',
                     maxWidth: "250px",
-                    color: "#7f838f"
+                    color: "#A6B0C1"
                 }}>John Doe</a>
-                <img src={profile} alt={profile} height="25xp"
-                     style={{ borderRadius: '20px', position: 'absolute', marginLeft: '-297px', marginTop: '320px'}}/>
+                <img src={profile} alt={profile} height="20xp"
+                     style={{ borderRadius: '20px', position: 'absolute', marginLeft: '-251px', marginTop: '320px'}}/>
 
                 <a style={{
                     position: 'absolute',
@@ -131,30 +133,30 @@ export const HomePage: FC = () => {
 
                 <img src={projectSignoff} alt={supplierContract}
                      style={{height: '90px', width: '100px', position: 'absolute', marginLeft: '20px', marginTop: '40px'}}/>
-                <a style={{fontSize: '17px', position: 'absolute', marginLeft: '130px', marginTop: '50px'}}>Lorem inpsum
-                    dolor sit amet, consecteur adipisiscing elit... and one more line for the demo</a>
+                <a style={{fontSize: '15px', position: 'absolute', marginLeft: '130px', marginTop: '50px', color: 'darklategrey', fontWeight:"bold"}}>Lorem inpsum
+                    dolor sit amet, consecteur adipisiscing elit... dolor sit amet, consecteur dolor amet, adipisiscing elit... and one <br/> more line for the demo</a>
                 <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '130px', marginTop: '100px'}}>7 jan.
                     2020 <a style={{color: "#7f838f", marginLeft:"35px"}}></a>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '209px', marginTop: '98px'}}/>
+                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '208px', marginTop: '97px'}}/>
 
                 <img src={projectSignoff} alt={supplierContract}
                      style={{height: '90px', width: '100px', position: 'absolute', marginLeft: '20px', marginTop: '140px'}}/>
-                <a style={{fontSize: '17px', position: 'absolute', marginLeft: '130px', marginTop: '150px'}}>Lorem
-                    inpsum dolor sit amet, consecteur adipisiscing elit... and one more line for the demo</a>
+                <a style={{fontSize: '15px', position: 'absolute', marginLeft: '130px', marginTop: '150px', color: 'darkslategrey', fontWeight:"bold"}}>Lorem inpsum
+                    dolor sit amet, consecteur adipisiscing elit... dolor sit amet, consecteur dolor amet, adipisiscing elit... and one <br/> more line for the demo</a>
                 <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '130px', marginTop: '198px'}}>7 jan.
-                    2020 <a style={{color: "#7f838f", marginLeft:"35px"}}></a>John Doe</a>
+                    2020 <a style={{color: "red", marginLeft:"35px"}}></a>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '209px', marginTop: '195px'}}/>
+                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '208px', marginTop: '195px'}}/>
 
                 <img src={projectSignoff} alt={supplierContract}
                      style={{height: '90px', width: '100px', position: 'absolute', marginLeft: '20px', marginTop: '240px'}}/>
-                <a style={{fontSize: '17px', position: 'absolute', marginLeft: '130px', marginTop: '250px'}}>Lorem
-                    inpsum dolor sit amet, consecteur adipisiscing elit... and one more line for the demo</a>
+                <a style={{fontSize: '15px', position: 'absolute', marginLeft: '130px', marginTop: '250px', color: 'darkslategrey', fontWeight:"bold"}}>Lorem inpsum
+                    dolor sit amet, consecteur adipisiscing elit... dolor sit amet, consecteur dolor amet, adipisiscing elit... and one <br/> more line for the demo</a>
                 <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '130px', marginTop: '298px'}}>7 jan.
-                    2020 <a style={{color: "#7f838f", marginLeft:"35px"}}></a>John Doe</a>
+                    2020 <a style={{marginLeft:"35px", color: 'darkslategrey'}}></a>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '209px', marginTop: '295px'}}/>
+                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '208px', marginTop: '295px'}}/>
 
 
 
@@ -195,10 +197,10 @@ export const HomePage: FC = () => {
 
                 <MenuWrapper ref={wrapperRef}>
                     <RightSide onClick={menuHandler}>
-                        <img src={search} alt="search"/>
+                        <img src={followed2} alt="followed2"/>
                         <span style={{fontSize: '19px', color:'#2678ba'}}>Followed</span>
                     </RightSide>
-                    <img onClick={menuHandler} src={arrowDown} alt=""/>
+                    <img onClick={menuHandler} src={arrowdown} alt="arrow" style={{marginTop:"20px", color:'#2678ba'}}/>
                     {dropdownOpen &&
                     <ExpandedMenu/>
                     }

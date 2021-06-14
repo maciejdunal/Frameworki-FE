@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 const Content = styled.div`
   height: 230px;
-  margin-left: 10px;
+  margin-left: 0px;
   img {
     height: 230px;
     border-radius:10px;
@@ -54,8 +54,8 @@ const Arrow = ({ text, className }: {text: any, className: any}) => {
 };
 
 
-const ArrowLeft = Arrow({ text: '<', className: 'arrow-prev' });
-const ArrowRight = Arrow({ text: '>', className: 'arrow-next' });
+const ArrowLeft = Arrow({ text: '', className: 'arrow-prev' });
+const ArrowRight = Arrow({ text: '', className: 'arrow-next' });
 
 const selected = 'item1';
 

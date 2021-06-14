@@ -15,10 +15,12 @@ export const ExpandedMenu: FC = () => {
     return (
         <Wrapper>
             <ul>
-                <li>111</li>
-                <li>222</li>
-                <li>333</li>
-                <li>444</li>
+                <li>Home</li>
+                <hr style={{height: '2px', width: '50%',borderWidth:'0', color:'red', backgroundColor:'red'}}></hr>
+                <li>Publications</li>
+                <li>People</li>
+                <li>Entities</li>
+                <li>Administration</li>
             </ul>
         </Wrapper>
     );
