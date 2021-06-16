@@ -92,7 +92,7 @@ export const LeftMenu: FC = () => {
                         </button>
 
                         <button style={{width:'33px', marginLeft:'113px', cursor: 'pointer', background:'white', height:'23px', borderRadius:'5px', outline:'none'}}>
-                            <img src = {userPlus} alt = {userPlus} style={{marginTop:"1px", marginLeft:"2px"}}/>
+                            <img src = {userPlus} alt = {userPlus} style={{marginTop:"2px", marginLeft:"2px"}}/>
                         </button>
                     </div>
                 </YourNetwork>

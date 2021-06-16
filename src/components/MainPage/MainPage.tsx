@@ -27,7 +27,7 @@ import {Ecosystem} from "../common/ecosystem";
 const Content = styled.div`
   height: 1000px;
   display: flex;
-  background: #edeaea;
+  background: #F5F7F9;
 `;
 
 const MainPage: FC = () => {

@@ -15,12 +15,13 @@ import profile from "../../media/icons/profile-example.png";
 
 const Wrapper = styled.div`
   position: absolute;
-  top: 24px;
+  top: 43px;
   left: 0;
   background: white;
   padding: 0px;
   border: 1px solid #caccd3;
-  width: 215px;
+  width: 300px;
+  z-index: 1;
 `;
 
 const Account = styled.div`
@@ -39,7 +40,7 @@ export const ExpandedMenu: FC = () => {
                 <li style={{paddingTop:'5px',paddingBottom:'5px', color:'darkslategrey', fontWeight:'bold', fontSize:'17px'}}><img src={people} alt={people} style={{paddingLeft:'14px', paddingRight:'13px',verticalAlign: 'text-bottom'}}/>People</li>
                 <li style={{paddingTop:'5px',paddingBottom:'5px', color:'darkslategrey', fontWeight:'bold', fontSize:'17px'}}><img src={entities2} alt={entities2} style={{paddingLeft:'14px', paddingRight:'13px',verticalAlign: 'text-bottom'}}/>Entities</li>
                 <li style={{paddingTop:'5px',paddingBottom:'5px', color:'darkslategrey', fontWeight:'bold', fontSize:'17px'}}><img src={administration} alt={administration} style={{paddingLeft:'14px', paddingRight:'13px',verticalAlign: 'text-bottom'}}/>Administration</li>
-                <label style={{color:'#969A9F', fontSize:'13x', fontWeight:'bold', padding:'14px'}}>Workspaces</label>
+                <label style={{color:'#969A9F', fontSize:'13px', fontWeight:'bold', padding:'14px'}}>Workspaces</label>
                 <li style={{paddingTop:'5px',paddingBottom:'5px', color:'darkslategrey', fontWeight:'bold', fontSize:'17px'}}><img src={entities2} alt={entities2} style={{paddingLeft:'14px', paddingRight:'13px',verticalAlign: 'text-bottom'}}/>Client conract</li>
                 <li style={{paddingTop:'5px',paddingBottom:'5px', color:'darkslategrey', fontWeight:'bold', fontSize:'17px'}}><img src={entities2} alt={entities2} style={{paddingLeft:'14px', paddingRight:'13px',verticalAlign: 'text-bottom'}}/>Supplier contract</li>
                 <li style={{paddingTop:'5px',paddingBottom:'5px', color:'darkslategrey', fontWeight:'bold', fontSize:'17px'}}><img src={entities2} alt={entities2} style={{paddingLeft:'14px', paddingRight:'13px',verticalAlign: 'text-bottom'}}/>Corporate</li>

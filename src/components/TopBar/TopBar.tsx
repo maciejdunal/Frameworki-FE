@@ -18,16 +18,20 @@ import house2 from '../../media/icons/house2.svg'
 
 
 const InnerWrapper = styled.div`
-  height: 40px;
+  height: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: ${fontSize["18"]}
-
-
+  font-size: ${fontSize["18"]};
+  border-bottom: 1px solid #d8dbe1;
+  
 `;
 
-const RightIcons = styled.div`
+const RightSide = styled.div`
+width:32%;`
+
+const RSIcons = styled.div`
+  margin-left: 73%;
   display: grid;
   grid-template-columns: repeat(5,auto);
   grid-gap: 20px;
@@ -35,6 +39,7 @@ const RightIcons = styled.div`
 `;
 
 const InputWrapper = styled.div`
+  width:36%;
   align-content: center;
   display:flex;
 `;
@@ -47,10 +52,8 @@ const LeftLogo = styled.div`
 `;
 
 const SearchField = styled.div`
-  width: 250px;
+  width: 100%;
   padding: 8px;
-  margin-left: -350px;
-
 `;
 
 const SearchButton = styled.div`
@@ -60,24 +63,32 @@ const SearchButton = styled.div`
   font-size: 30px;
   cursor: pointer;
   margin-top: 2px;
-  margin-left: 140px;
+  margin-left: 34%;
   position: absolute;
-
 `;
+
+
+const Menu = styled.div`
+  width: 32%;
+  display: flex;
+  //justify-content: space-between;
+    `;
+
+const LeftSide = styled.div`
+  display: flex;
+  width: 100%;
+`;
+
 const MenuWrapper = styled.div`
   display: flex;
   cursor: pointer;
   position: relative;
   align-items: center;
-  width: 13%;
-  justify-content: space-between;
-  margin-left: -650px;
-
+  margin-left: 15%;
+  //justify-content: space-between;
 
 `;
-const LeftSide = styled.div`
-  
-`;
+
 
 
 
@@ -90,35 +101,41 @@ export const TopBar: FC = () => {
     return (
         <Wrapper>
             <InnerWrapper>
+                <Menu>
+                        <LeftSide onClick={menuHandler}>
+                            <LeftLogo>
+                                <a href="/HomePage"><img src={logo} alt="logo" height="35px" /></a>
+                            </LeftLogo>
+                            <MenuWrapper ref={wrapperRef}>
+                            <img src ={house2} alt = "" />
+                            <span  style={{marginLeft:'8%'}}>Home</span>
+                            <img onClick={menuHandler} style={{marginLeft:'198px'}} src ={arrowdown} alt = "ad"/>
+                            {dropdownOpen &&
+                            <ExpandedMenu>
+                            </ExpandedMenu>
+                            }
+                            </MenuWrapper>
+                        </LeftSide>
 
-                <LeftLogo>
-                    <a href="/HomePage"><img src={logo} alt="logo" height="40px" /></a>
-                </LeftLogo>
-                <MenuWrapper ref={wrapperRef}>
-                    <LeftSide onClick={menuHandler}>
-                        <img src ={house2} alt = "" />
-                        <span>Home</span>
-                    </LeftSide >
-                    <img onClick={menuHandler} src ={arrowdown} alt = ""/>
-                    {dropdownOpen &&
-                    <ExpandedMenu/>
-                    }
-                </MenuWrapper>
+
+                 </Menu>
+
                 <InputWrapper>
                     <SearchField>
-                        <input type="text" placeholder="Search Legalcluster" style={{width:'500px', height:'20px'}}/>
+                        <input type="text" placeholder="Search Legalcluster" style={{width:'100%', height:'20px'}}/>
                     </SearchField>
 
                     <SearchButton>
                         <img src={search} alt="search" />
                     </SearchButton>
                 </InputWrapper>
-
-                <RightIcons>
+            <RightSide>
+                <RSIcons>
                     <img src={house} style={{backgroundColor: "lightgray", border:"25px", borderRadius:"10px"}} alt="house"/>
                     <img src={comments} alt="comments"/>
                     <img src={bell} alt="bell"/>
-                </RightIcons>
+                </RSIcons>
+            </RightSide>
             </InnerWrapper>
         </Wrapper>
     );
