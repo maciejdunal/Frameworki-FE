@@ -26,17 +26,12 @@ const list: any[] = [
     { name: projectSignoff2 },
 ];
 
-
-// One item component
-// selected prop will be passed
 const MenuItem = ({text, selected}: {text: any, selected: any}) => {
-    return <div
+    return <a href={"Workspace"+'selected lsit item'}><div
         className={`menu-item ${selected ? 'active' : ''}`}
-    ><img style={{ boxShadow: "0px 2px #d8dbe1", borderLeft: "1px solid #d8dbe1", borderRight: "1px solid #d8dbe1"}} src={text}></img></div>;
+    ><img style={{ boxShadow: "0px 2px #d8dbe1", borderLeft: "1px solid #d8dbe1", borderRight: "1px solid #d8dbe1"}} src={text}></img></div></a>;
 };
 
-// All items component
-// Important! add unique key
 export const Menu = (list: any[], selected: any) =>
     list.map((el) => {
         const {name} = el;
@@ -45,25 +40,14 @@ export const Menu = (list: any[], selected: any) =>
     });
 
 
-const Arrow = ({ text, className }: {text: any, className: any}) => {
-    return (
-        <div
-            className={className}
-        >{text}</div>
-    );
-};
 
 
-const ArrowLeft = Arrow({ text: '', className: 'arrow-prev' });
-const ArrowRight = Arrow({ text: '', className: 'arrow-next' });
-
-const selected = 'item1';
+const selected = 'workspace1';
 
 export class Scrollws extends Component {
     private menuItems: any;
     constructor(props: any) {
         super(props);
-        // call it again if items count changes
         this.menuItems = Menu(list, selected);
     }
 
@@ -86,8 +70,6 @@ export class Scrollws extends Component {
                 <Content>
                     <ScrollMenu
                         data={menu}
-                        arrowLeft={ArrowLeft}
-                        arrowRight={ArrowRight}
                         selected={selected}
                         onSelect={this.onSelect}
                     />

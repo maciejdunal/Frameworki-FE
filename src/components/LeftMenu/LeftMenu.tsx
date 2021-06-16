@@ -15,8 +15,8 @@ import entities2 from '../../media/icons/entities2.png';
 import ecosystem from '../../media/icons/ecosystem.png';
 
 const InnerWrapper = styled.div`
-  font-family: Arial, sans-serif;
-  margin-top: 20px;
+  font-family: "Calvin-Medium";
+  margin-top: 8%;
   margin-left: 20px;
   height: 170px;
   width: 320px;
@@ -27,10 +27,10 @@ const InnerWrapper = styled.div`
   border-right: 1px solid #d8dbe1;
 `;
 const InnerWrapper2 = styled.div`
-  font-family: Arial, sans-serif;
+  font-family: "Calvin-Medium";
   margin-top: 1px;
   margin-left: 20px;
-  height: 80px;
+  height: 85px;
   width: 320px;
   background: white;
   border-bottom-right-radius: 5px;
@@ -44,22 +44,23 @@ const Photo = styled.div`
     margin-left: 118px;
 `;
 const NameAndTitle = styled.div`
-    margin-top: 5px;
+    margin-top: 2%;
     text-align: center;
 `;
 const YourNetwork = styled.div`
-  padding-top: 10px;
-  margin-left: 10px;
+  padding-top: 3%;
+  margin-left: 3%;
 `;
 
 const YourPublications = styled.div`
-margin-left: 10px;
-  margin-top: 10px;
+margin-left: 3%;
+  margin-top: 3%;
 `;
 
 const PEE = styled.div`
-  margin-left: 35px;
-  margin-top: 20px;
+  
+  margin-left: 9%;
+  margin-top: 8%;
 `;
 
 
@@ -74,7 +75,7 @@ export const LeftMenu: FC = () => {
                 <NameAndTitle>
                     <div>
                         <button style={{background:'white', border:'none', cursor: 'pointer', outline:'none'}}>
-                            <h1 style={{color:'#2678ba', fontSize:'18px', fontWeight: "bold"}}>Humberta Swift</h1>
+                            <h1 style={{color:'#2678ba', fontSize:'18px', fontWeight: "bold", fontFamily: "Calvin-Medium"}}>Humberta Swift</h1>
                         </button>
                     </div>
                     <div>
@@ -88,10 +89,10 @@ export const LeftMenu: FC = () => {
                     <div style={{marginLeft:'5px', background:"white"}}>
                         <button style={{background:'white', border: 'none', cursor:'pointer', }}>
                             <img src = {network} alt = {network} style={{marginTop:'1px', outline:'none'}}/>
-                            <a style={{color:"#555b70", marginLeft:'14px', fontSize:'15px', fontWeight: "bold" }}>Your Network</a>
+                            <a style={{color:"#555b70", marginLeft:'14px', fontSize:'20px', fontFamily: "Calvin-Medium"}}>Your Network</a>
                         </button>
 
-                        <button style={{width:'33px', marginLeft:'113px', cursor: 'pointer', background:'white', height:'23px', borderRadius:'5px', outline:'none'}}>
+                        <button style={{width:'33px', marginLeft:'30%', cursor: 'pointer', background:'white', height:'23px', borderRadius:'5px', outline:'none'}}>
                             <img src = {userPlus} alt = {userPlus} style={{marginTop:"2px", marginLeft:"2px"}}/>
                         </button>
                     </div>
@@ -100,10 +101,10 @@ export const LeftMenu: FC = () => {
                     <div style={{marginLeft:'5px'}}>
                         <button style={{background:'white', border:'none', cursor:'pointer', outline:'none' }}>
                             <img src = {publications} alt = {publications}/>
-                            <a style={{color:"#555b70", marginLeft:'14px', fontSize:'15px', fontWeight: "bold"}}>Your Publications</a>
+                            <a style={{color:"#555b70", marginLeft:'14px', fontSize:'20px', fontFamily: "Calvin-Medium"}}>Your Publications</a>
                         </button>
 
-                        <button style={{width:'33px', marginLeft:'85px', cursor: 'pointer', background:'white', height:'23px', borderRadius:'5px', outline:'none'}}>
+                        <button style={{width:'33px', marginLeft:'22%', cursor: 'pointer', background:'white', height:'23px', borderRadius:'5px', outline:'none'}}>
                             <img src = {plus} alt = {plus} style={{marginTop:"1px"}}/>
                         </button>
                     </div>
@@ -112,21 +113,21 @@ export const LeftMenu: FC = () => {
             </InnerWrapper2>
             <PEE>
                 <div>
-                    <button style={{border:'none', background:'none', marginTop:'10px',cursor:'pointer', outline:'none'}}>
+                    <button style={{border:'none', background:'none', marginTop:'10px',cursor:'pointer', outline:'none',display: 'flex', alignItems: 'center'}}>
                         <img src = {publications} alt = {publications} style={{height:'18px'}}/>
-                        <a style={{color:"#555b70",marginLeft:'20px', fontSize:'14px', fontWeight: "bold"}}>Publications</a>
+                        <a style={{color:"#555b70",marginLeft:'20px', fontSize:'20px', fontFamily: "Calvin-Medium"}}>Publications</a>
                     </button>
                 </div>
                 <div>
-                    <button style={{border:'none', background:'none', marginTop:'10px',cursor:'pointer', outline:'none'}}>
+                    <button style={{border:'none', background:'none', marginTop:'10px',cursor:'pointer', outline:'none',display: 'flex', alignItems: 'center'}}>
                         <img src = {ecosystem} alt = {ecosystem} style={{height:'25px'}}/>
-                        <a style={{color:"#555b70",marginLeft:'20px', fontSize:'14px', fontWeight: "bold"}}>Ecosystem</a>
+                        <a style={{color:"#555b70",marginLeft:'20px', fontSize:'20px', fontFamily: "Calvin-Medium"}}>Ecosystem</a>
                     </button>
                 </div>
                 <div>
-                    <button style={{border:'none', background:'none', marginTop:'10px',cursor:'pointer', outline:'none'}}>
+                    <button style={{border:'none', background:'none', marginTop:'10px',cursor:'pointer', outline:'none',display: 'flex', alignItems: 'center'}}>
                         <img src = {entities2} alt = {entities2}/>
-                        <a href="/Entities" style={{color:"#555b70", marginLeft:'25px', fontSize:'14px',fontWeight: "bold", textDecoration:'none'}}>Entities</a>
+                        <a href="/Entities" style={{color:"#555b70", marginLeft:'25px', marginTop:'0px', fontSize:'20px', textDecoration:'none', fontFamily: "Calvin-Medium"}}>Entities</a>
                     </button>
                 </div>
 

@@ -18,14 +18,13 @@ import projectSignoff from '../../media/images/projectSignoff.png';
 
 
 const LatestPublications = styled.div`
-  margin-left: 40px;
-  margin-top: 20px;
+  font-family: "Calvin-Medium";
+  margin-left: 4%;
+  margin-top: 2%;
   background: white;
-  height: 370px;
-  max-width: 1460px;
-  max-width: 1470px;
+  height: 37%;
+  max-width: 90%;
   border-radius: 5px;
-  font-family: Arial, sans-serif;
   box-shadow: 0px 2px #d8dbe1;
   border-left: 1px solid #d8dbe1;
   border-right: 1px solid #d8dbe1;
@@ -33,43 +32,46 @@ const LatestPublications = styled.div`
 
 const WorkSpaces = styled.div`
   max-width: 1460px;
-  margin-left: 12px;
-  margin-top: 20px;
-  /*background: white;
- width: 1500px;
- height: 200px;
- border-radius: 5px;*/
+  margin-left: 4%;
+  margin-top: 2%;
+  margin-right: 6%;
 `;
 
-const ResumeYourWork = styled.div`
+const WSSmenu = styled.div`
+`;
+
+const ResumeYourWork2 = styled.div`
+  font-family: "Calvin-Medium";
+  margin-top: 2%;
+  margin-left: 4%;
+  margin-right: 6%;
+  display: flex;
+  alignItems: center;
+`;
+
+/*const ResumeYourWork = styled.div`
   margin-left: 30px;
   margin-top: 20px;
   background: none;
-`;
+`;*/
 const SearchField = styled.div`
-  width: 250px;
-  margin-left: 1100px;
-  margin-top: -20px;
+  margin-left: 46.7%;
   position: absolute;
 `;
 
 const SearchButton = styled.div`
+  margin-left: 54.5%;
   padding: 3px;
-  font-size: 30px;
-  cursor: pointer;
-  margin-left: 1250px;
+  font-size: 20px;
+  cursor: none;
   position: absolute;
-  margin-top: -26px;
 `;
 const MenuWrapper = styled.div`
   display: flex;
-  cursor: pointer;
-  position: relative;
+  margin-left: 70.5%;
+
   align-items: center;
-  width: 90px;
-  justify-content: space-between;
-  margin-left: 1330px;
-  margin-top: -20px;
+
 
 `;
 const RightSide = styled.div`
@@ -87,108 +89,119 @@ export const HomePage: FC = () => {
         <Wrapper>
             <LatestPublications>
                 <img src={skyscrapers} alt={skyscrapers} style={{
-                    height: '370px',
+                    height: '100%',
                     borderTopLeftRadius: '4px',
                     borderBottomLeftRadius: '4px',
-                    maxWidth: "380px"
+                    width: "410px"
                 }}/>
                 <a style={{
                     color: 'white',
-                    fontSize: '15px',
+                    fontSize: '16px',
                     position: 'absolute',
-                    marginLeft: '-315px',
-                    marginTop: '270px',
-                    maxWidth: "250px"
+                    marginLeft: '-20%',
+                    marginTop: '14%',
+                    maxWidth: "360px"
 
                 }}>Lorem inpsum dolor sit amet, consecteur adipisiscing elit... and <br/> one more line for the
                     demo  </a>
                 <a style={{
                     fontSize: '11px',
                     position: 'absolute',
-                    marginLeft: '-315px',
-                    marginTop: '325px',
-                    maxWidth: "250px",
+                    marginLeft: '-20%',
+                    marginTop: '17%',
+                    maxWidth: "350px",
                     color: "#caccd3"
                 }}>7 jan. 2020</a>
                 <a style={{
                     fontSize: '11px',
                     position: 'absolute',
-                    marginLeft: '-216px',
-                    marginTop: '325px',
+                    marginLeft: '-15.8%',
+                    marginTop: '17%',
                     maxWidth: "250px",
                     color: "#A6B0C1"
                 }}>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{ borderRadius: '20px', position: 'absolute', marginLeft: '-251px', marginTop: '320px'}}/>
+                     style={{ borderRadius: '20px', position: 'absolute', marginLeft: '-17.2%', marginTop: '318px'}}/>
 
                 <a style={{
                     position: 'absolute',
                     marginTop: '10px',
                     marginLeft: '20px',
-                    fontSize: '20px',
+                    fontSize: '25px',
                     color: 'darkslategrey',
                     fontWeight: "bold"
                 }}>Latest publications</a>
 
+               {/*1*/}
 
                 <img src={projectSignoff} alt={supplierContract}
-                     style={{height: '90px', width: '100px', position: 'absolute', marginLeft: '20px', marginTop: '40px'}}/>
-                <a style={{fontSize: '15px', position: 'absolute', marginLeft: '130px', marginTop: '50px', color: 'darklategrey', fontWeight:"bold"}}>Lorem inpsum
-                    dolor sit amet, consecteur adipisiscing elit... dolor sit amet, consecteur dolor amet, adipisiscing elit... and one <br/> more line for the demo</a>
+                     style={{height: '9%', width: '4.5%', position: 'absolute', marginLeft: '1.1%', marginTop: '2.1%'}}/>
+                <a style={{fontSize: '20px', position: 'absolute', marginLeft: '6.5%', marginTop: '2.5%', color: 'darklategrey'}}>Lorem inpsum
+                    dolor sit amet, consecteur adipisiscing elit... and one <br/> more line for the demo</a>
                 <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '130px', marginTop: '100px'}}>7 jan.
                     2020 <a style={{color: "#7f838f", marginLeft:"35px"}}></a>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '208px', marginTop: '97px'}}/>
+                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '10.4%', marginTop: '5%'}}/>
+                {/*2*/}
 
                 <img src={projectSignoff} alt={supplierContract}
-                     style={{height: '90px', width: '100px', position: 'absolute', marginLeft: '20px', marginTop: '140px'}}/>
-                <a style={{fontSize: '15px', position: 'absolute', marginLeft: '130px', marginTop: '150px', color: 'darkslategrey', fontWeight:"bold"}}>Lorem inpsum
-                    dolor sit amet, consecteur adipisiscing elit... dolor sit amet, consecteur dolor amet, adipisiscing elit... and one <br/> more line for the demo</a>
+                     style={{height: '9%', width: '4.5%', position: 'absolute', marginLeft: '1.1%', marginTop: '7.4%'}}/>
+                <a style={{fontSize: '20px', position: 'absolute', marginLeft: '6.5%', marginTop: '150px', color: 'darkslategrey'}}>Lorem inpsum
+                    dolor sit amet, consecteur adipisiscing elit... and one <br/> more line for the demov</a>
                 <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '130px', marginTop: '198px'}}>7 jan.
                     2020 <a style={{color: "red", marginLeft:"35px"}}></a>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '208px', marginTop: '195px'}}/>
+                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '10.4%', marginTop: '195px'}}/>
+                {/*3*/}
 
                 <img src={projectSignoff} alt={supplierContract}
-                     style={{height: '90px', width: '100px', position: 'absolute', marginLeft: '20px', marginTop: '240px'}}/>
-                <a style={{fontSize: '15px', position: 'absolute', marginLeft: '130px', marginTop: '250px', color: 'darkslategrey', fontWeight:"bold"}}>Lorem inpsum
-                    dolor sit amet, consecteur adipisiscing elit... dolor sit amet, consecteur dolor amet, adipisiscing elit... and one <br/> more line for the demo</a>
+                     style={{height: '9%', width: '4.5%', position: 'absolute', marginLeft: '1.1%', marginTop: '240px'}}/>
+                <a style={{fontSize: '20px', position: 'absolute', marginLeft: '130px', marginTop: '250px', color: 'darkslategrey'}}>Lorem inpsum
+                    dolor sit amet, consecteur adipisiscing elit... and one <br/> more line for the demo</a>
                 <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '130px', marginTop: '298px'}}>7 jan.
                     2020 <a style={{marginLeft:"35px", color: 'darkslategrey'}}></a>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '208px', marginTop: '295px'}}/>
+                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '10.4%', marginTop: '295px'}}/>
 
 
 
                 <a style={{
-                    fontSize: '17px',
+                    fontSize: '16px',
                     position: 'absolute',
                     marginTop: '340px',
                     marginLeft: '22px',
                     color:'#2678ba',
-                    fontFamily: "Arial, sans-serif",
-                    fontWeight: "bold"
+                    fontFamily: "Calvin-Medium",
+
                 }}>See more publications</a>
 
             </LatestPublications>
-            <br/>
-            <div style={{marginLeft: '4%', fontFamily: "Arial, sans-serif"}}>
-                <h1 style={{
-                    fontSize: '18px',
-                    color: 'darkslategrey',
-                    fontFamily: "Arial, sans-serif",
-                    fontWeight: "bold"
-                }}>Workspaces</h1></div>
             <WorkSpaces>
 
+                <h1 style={{
+                    fontSize: '22px',
+                    color: 'darkslategrey',
+                    fontFamily: "Calvin-Medium",
+                    marginLeft:'2%',
+                    paddingBottom:'1%'
+                }}>Workspaces</h1>
+                <WSSmenu>
                 <Scrollws/>
-
+                </WSSmenu>
             </WorkSpaces>
-            <ResumeYourWork>
-                <h1 style={{fontSize: '20px', color: 'darkslategrey'}}>Resume Your Work</h1>
+            {/*<ResumeYourWork>*/}
+                <ResumeYourWork2>
+                <h1 style={{
+                    fontSize: '22px',
+                    color: 'darkslategrey',
+                    fontFamily: "Calvin-Medium",
+                    marginLeft:'2%',
+                    paddingBottom:'1%',
+                    minWidth:'11.67%'
+                }}>Resume Your Work</h1>
 
                 <SearchField>
-                    <input type="text" placeholder="Filter by title..." style={{height: '20px'}}/>
+                    <input type="text" placeholder="Filter by title..." style={{height: '27px'}}/>
                 </SearchField>
 
                 <SearchButton>
@@ -197,7 +210,7 @@ export const HomePage: FC = () => {
 
                 <MenuWrapper ref={wrapperRef}>
                     <RightSide onClick={menuHandler}>
-                        <img src={followed2} alt="followed2"/>
+                        <img src={followed2} alt="followed2" style={{width:'35px'}}/>
                         <span style={{fontSize: '19px', color:'#2678ba'}}>Followed</span>
                     </RightSide>
                     <img onClick={menuHandler} src={arrowdown} alt="arrow" style={{marginTop:"20px", color:'#2678ba'}}/>
@@ -205,7 +218,7 @@ export const HomePage: FC = () => {
                     <ExpandedMenu/>
                     }
                 </MenuWrapper>
-
+            </ResumeYourWork2>
                 <ReactPaginate
                     previousLabel={"PREVIOUS"}
                     nextLabel={"NEXT"}
@@ -217,7 +230,7 @@ export const HomePage: FC = () => {
                     activeClassName={"active"} pageCount={15}
                 />
 
-            </ResumeYourWork>
+            {/*</ResumeYourWork>*/}
         </Wrapper>
     );
 }

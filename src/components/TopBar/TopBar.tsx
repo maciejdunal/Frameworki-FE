@@ -16,6 +16,11 @@ import arrowdown from '../../media/icons/arrow-down.png';
 import useDropdown from "react-dropdown-hook";
 import house2 from '../../media/icons/house2.svg'
 
+const HPWrapper = styled.div`
+  font-family: "Calvin-Medium";
+  
+  background: white;
+`;
 
 const InnerWrapper = styled.div`
   height: 45px;
@@ -39,7 +44,7 @@ const RSIcons = styled.div`
 `;
 
 const InputWrapper = styled.div`
-  width:36%;
+  widthh:36%;
   align-content: center;
   display:flex;
 `;
@@ -85,7 +90,6 @@ const MenuWrapper = styled.div`
   position: relative;
   align-items: center;
   margin-left: 15%;
-  //justify-content: space-between;
 
 `;
 
@@ -99,7 +103,7 @@ export const TopBar: FC = () => {
         toggleDropDown();
     }
     return (
-        <Wrapper>
+        <HPWrapper>
             <InnerWrapper>
                 <Menu>
                         <LeftSide onClick={menuHandler}>
@@ -108,7 +112,7 @@ export const TopBar: FC = () => {
                             </LeftLogo>
                             <MenuWrapper ref={wrapperRef}>
                             <img src ={house2} alt = "" />
-                            <span  style={{marginLeft:'8%'}}>Home</span>
+                            <span  style={{marginLeft:'8%', marginTop:'6px', fontSize:'19px'}}>Home</span>
                             <img onClick={menuHandler} style={{marginLeft:'198px'}} src ={arrowdown} alt = "ad"/>
                             {dropdownOpen &&
                             <ExpandedMenu>
@@ -122,7 +126,7 @@ export const TopBar: FC = () => {
 
                 <InputWrapper>
                     <SearchField>
-                        <input type="text" placeholder="Search Legalcluster" style={{width:'100%', height:'20px'}}/>
+                        <input type="text" placeholder="Search Legalcluster" style={{width:'100%', height:'20px', borderRadius: '5px', border: '1px solid red '}}/>
                     </SearchField>
 
                     <SearchButton>
@@ -137,7 +141,7 @@ export const TopBar: FC = () => {
                 </RSIcons>
             </RightSide>
             </InnerWrapper>
-        </Wrapper>
+        </HPWrapper>
     );
 };
 
