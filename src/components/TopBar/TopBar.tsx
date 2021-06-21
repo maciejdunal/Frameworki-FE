@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-
+import "../common/common.css"
 import { Wrapper } from '../../styledHelpers/Components';
 import { Colors } from '../../styledHelpers/Colors';
 import { fontSize } from '../../styledHelpers/FontSizes'
-
+import { Badge } from '@material-ui/core';
 import { ExpandedMenu } from './ExpandedMenu';
 
 import logo from '../../media/logo.png';
@@ -23,7 +23,7 @@ const HPWrapper = styled.div`
 `;
 
 const InnerWrapper = styled.div`
-  height: 45px;
+  height: 45px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,6 +58,7 @@ const LeftLogo = styled.div`
 
 const SearchField = styled.div`
   width: 100%;
+  min-width:650px;
   padding: 8px;
 `;
 
@@ -67,8 +68,8 @@ const SearchButton = styled.div`
   padding: 3px;
   font-size: 30px;
   cursor: pointer;
-  margin-top: 2px;
-  margin-left: 34%;
+  margin-top: 7px;
+  margin-left: 33.5%;
   position: absolute;
 `;
 
@@ -115,8 +116,8 @@ export const TopBar: FC = () => {
                             <span  style={{marginLeft:'8%', marginTop:'6px', fontSize:'19px'}}>Home</span>
                             <img onClick={menuHandler} style={{marginLeft:'198px'}} src ={arrowdown} alt = "ad"/>
                             {dropdownOpen &&
-                            <ExpandedMenu>
-                            </ExpandedMenu>
+                            <ExpandedMenu/>
+
                             }
                             </MenuWrapper>
                         </LeftSide>
@@ -126,7 +127,7 @@ export const TopBar: FC = () => {
 
                 <InputWrapper>
                     <SearchField>
-                        <input type="text" placeholder="Search Legalcluster" style={{width:'100%', height:'20px', borderRadius: '5px', border: '1px solid red '}}/>
+                        <input type="text" id="searchbar" placeholder="Search Legalcluster" style={{width:'100%', height:'25px', borderRadius: '5px', border: '1px solid #eaeaea '}}/>
                     </SearchField>
 
                     <SearchButton>
@@ -135,9 +136,9 @@ export const TopBar: FC = () => {
                 </InputWrapper>
             <RightSide>
                 <RSIcons>
-                    <img src={house} style={{backgroundColor: "lightgray", border:"25px", borderRadius:"10px"}} alt="house"/>
-                    <img src={comments} alt="comments"/>
-                    <img src={bell} alt="bell"/>
+                    <a href="/HomePage"><img style={{cursor:'pointer'}} src={house} alt="house"/></a>
+                    <Badge color="secondary" badgeContent={9} showZero><img style={{cursor:'pointer'}} src={comments} alt="comments"/></Badge>
+                    <Badge color="secondary" badgeContent={3} showZero><img style={{cursor:'pointer'}} src={bell} alt="bell"/></Badge>
                 </RSIcons>
             </RightSide>
             </InnerWrapper>

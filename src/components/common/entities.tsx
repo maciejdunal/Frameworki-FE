@@ -13,6 +13,7 @@ import search from "../../media/icons/search.png";
 import followed from "../../media/icons/followed.png";
 import Kinglawfirm1 from "../../media/images/Kinglawfirm1.png"
 import Kinglawfirm2 from "../../media/images/Kinglawfirm1.png"
+import "./common.css"
 
 
 const TTbar = styled.div`
@@ -79,7 +80,7 @@ export const Entities: FC = () => {
 
 
                 <SearchField>
-                    <input type="text" placeholder="Search..." style={{width:'200px', height:'25px', fontSize:'20px'}}/>
+                    <input type="text" id="searchbar" placeholder="Search..." style={{ height:'25px',width:'200px', fontSize:'16px', borderRadius: '5px', border: '1px solid #eaeaea'}}/>
                 </SearchField>
 
                 <SearchButton>

@@ -33,40 +33,39 @@ const Content = styled.div`
 const MainPage: FC = () => {
     return (
         <Router>
-        <Wrapper>
-            <TopBar/>
-            <Content>
-                <LeftMenu/>
+            <Wrapper>
+                <TopBar/>
+                <Content>
+                    <LeftMenu/>
 
-                <Switch>
+                    <Switch>
 
-                    <Route path="/entities" exact>
-                        <Entities/>
-                    </Route>
-                    <Route path="/ecosystem" exact>
-                        <Ecosystem/>
-                    </Route>
-                    <Route path="/publications" exact>
-                        <Publications/>
-                    </Route>
-                    <Route path="/yourPublications" exact>
-                        <YourPublications/>
-                    </Route>
-                    <Route path="/yourNetwork" exact>
-                        <YourNetwork/>
-                    </Route>
-                    <Route path="/profile" exact>
-                        <Profile/>
-                    </Route>
+                        <Route path="/entities" exact>
+                            <Entities/>
+                        </Route>
+                        <Route path="/ecosystem" exact>
+                            <Ecosystem/>
+                        </Route>
+                        <Route path="/publications" exact>
+                            <Publications/>
+                        </Route>
+                        <Route path="/yourPublications" exact>
+                            <YourPublications/>
+                        </Route>
+                        <Route path="/yourNetwork" exact>
+                            <YourNetwork/>
+                        </Route>
+                        <Route path="/profile" exact>
+                            <Profile/>
+                        </Route>
 
-                    <HomePage/>
-                </Switch>
+                        <HomePage/>
+                    </Switch>
 
-            </Content>
-        </Wrapper>
+                </Content>
+            </Wrapper>
         </Router>
     );
 };
 
 export default MainPage;
-

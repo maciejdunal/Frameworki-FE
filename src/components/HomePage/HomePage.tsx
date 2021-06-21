@@ -1,20 +1,21 @@
 import React, {FC} from 'react';
 import styled from 'styled-components';
 import "./HomePage.css"
-
+import "../common/common.css"
 import {Wrapper} from '../../styledHelpers/Components';
 import useDropdown from "react-dropdown-hook";
 import {ExpandedMenu} from "../HomePage/ExpandedMenu";
 import ReactPaginate from 'react-paginate';
 import {Scrollws} from './scrollMenu'
 import search from "../../media//icons/search.png";
-import followed from "../../media//icons/followed.png"
-import followed2 from "../../media//icons/followed2.png"
+import followed from "../../media//icons/followed.png";
+import followed2 from "../../media//icons/followed2.png";
 import arrowdown from '../../media/icons/arrow-down.png';
 import profile from '../../media/icons/profile-example.png';
 import skyscrapers from '../../media/images/skyscrapers.png';
 import supplierContract from '../../media/images/supplierContract.png';
 import projectSignoff from '../../media/images/projectSignoff.png';
+import Paginate from "./Paginate";
 
 
 const LatestPublications = styled.div`
@@ -40,27 +41,21 @@ const WorkSpaces = styled.div`
 const WSSmenu = styled.div`
 `;
 
-const ResumeYourWork2 = styled.div`
+const RYW = styled.div`
   font-family: "Calvin-Medium";
   margin-top: 2%;
   margin-left: 4%;
-  margin-right: 6%;
-  display: flex;
-  alignItems: center;
-`;
 
-/*const ResumeYourWork = styled.div`
-  margin-left: 30px;
-  margin-top: 20px;
-  background: none;
-`;*/
+
+`;
 const SearchField = styled.div`
   margin-left: 46.7%;
   position: absolute;
 `;
 
 const SearchButton = styled.div`
-  margin-left: 54.5%;
+  margin-left: 55%;
+  margin-top:3px;
   padding: 3px;
   font-size: 20px;
   cursor: none;
@@ -68,11 +63,13 @@ const SearchButton = styled.div`
 `;
 const MenuWrapper = styled.div`
   display: flex;
-  margin-left: 70.5%;
-
+  cursor: pointer;
+  position: relative;
   align-items: center;
-
-
+  width: 90px;
+  justify-content: space-between;
+  margin-left: 80%;
+  margin-top: -20px;
 `;
 const RightSide = styled.div`
   //display: flex;
@@ -88,6 +85,7 @@ export const HomePage: FC = () => {
     return (
         <Wrapper>
             <LatestPublications>
+
                 <img src={skyscrapers} alt={skyscrapers} style={{
                     height: '100%',
                     borderTopLeftRadius: '4px',
@@ -98,8 +96,8 @@ export const HomePage: FC = () => {
                     color: 'white',
                     fontSize: '16px',
                     position: 'absolute',
-                    marginLeft: '-20%',
-                    marginTop: '14%',
+                    marginLeft: '-18%',
+                    marginTop: '13%',
                     maxWidth: "360px"
 
                 }}>Lorem inpsum dolor sit amet, consecteur adipisiscing elit... and <br/> one more line for the
@@ -107,21 +105,21 @@ export const HomePage: FC = () => {
                 <a style={{
                     fontSize: '11px',
                     position: 'absolute',
-                    marginLeft: '-20%',
-                    marginTop: '17%',
+                    marginLeft: '-18%',
+                    marginTop: '15.9%',
                     maxWidth: "350px",
                     color: "#caccd3"
                 }}>7 jan. 2020</a>
                 <a style={{
                     fontSize: '11px',
                     position: 'absolute',
-                    marginLeft: '-15.8%',
-                    marginTop: '17%',
+                    marginLeft: '-13.8%',
+                    marginTop: '15.9%',
                     maxWidth: "250px",
                     color: "#A6B0C1"
                 }}>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{ borderRadius: '20px', position: 'absolute', marginLeft: '-17.2%', marginTop: '318px'}}/>
+                     style={{ borderRadius: '20px', position: 'absolute', marginLeft: '-15.2%', marginTop: '15.5%'}}/>
 
                 <a style={{
                     position: 'absolute',
@@ -132,7 +130,7 @@ export const HomePage: FC = () => {
                     fontWeight: "bold"
                 }}>Latest publications</a>
 
-               {/*1*/}
+                {/*1*/}
 
                 <img src={projectSignoff} alt={supplierContract}
                      style={{height: '9%', width: '4.5%', position: 'absolute', marginLeft: '1.1%', marginTop: '2.1%'}}/>
@@ -186,11 +184,12 @@ export const HomePage: FC = () => {
                     paddingBottom:'1%'
                 }}>Workspaces</h1>
                 <WSSmenu>
-                <Scrollws/>
+                    <Scrollws/>
                 </WSSmenu>
+
             </WorkSpaces>
             {/*<ResumeYourWork>*/}
-                <ResumeYourWork2>
+            <RYW>
                 <h1 style={{
                     fontSize: '22px',
                     color: 'darkslategrey',
@@ -201,11 +200,11 @@ export const HomePage: FC = () => {
                 }}>Resume Your Work</h1>
 
                 <SearchField>
-                    <input type="text" placeholder="Filter by title..." style={{height: '27px'}}/>
+                    <input type="text" id="searchbar" placeholder="Filter by title..." style={{width:'100%', height:'25px', borderRadius: '5px', border: '1px solid #eaeaea '}}/>
                 </SearchField>
 
                 <SearchButton>
-                    <img src={search} alt="search"/>
+                    <img src={search} alt="search" style={{height:'15px'}}/>
                 </SearchButton>
 
                 <MenuWrapper ref={wrapperRef}>
@@ -218,17 +217,8 @@ export const HomePage: FC = () => {
                     <ExpandedMenu/>
                     }
                 </MenuWrapper>
-            </ResumeYourWork2>
-                <ReactPaginate
-                    previousLabel={"PREVIOUS"}
-                    nextLabel={"NEXT"}
-                    breakLabel={"..."}
-                    breakClassName={"break-me"}
-                    marginPagesDisplayed={1}
-                    pageRangeDisplayed={3}
-                    containerClassName={"paginate"}
-                    activeClassName={"active"} pageCount={15}
-                />
+                <Paginate />
+            </RYW>
 
             {/*</ResumeYourWork>*/}
         </Wrapper>

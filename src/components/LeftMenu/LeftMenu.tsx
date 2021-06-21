@@ -101,7 +101,7 @@ export const LeftMenu: FC = () => {
                     <div style={{marginLeft:'5px'}}>
                         <button style={{background:'white', border:'none', cursor:'pointer', outline:'none' }}>
                             <img src = {publications} alt = {publications}/>
-                            <a style={{color:"#555b70", marginLeft:'14px', fontSize:'20px', fontFamily: "Calvin-Medium"}}>Your Publications</a>
+                            <a style={{color:"#555b70", marginLeft:'16px', fontSize:'20px', fontFamily: "Calvin-Medium"}}>Your Publications</a>
                         </button>
 
                         <button style={{width:'33px', marginLeft:'22%', cursor: 'pointer', background:'white', height:'23px', borderRadius:'5px', outline:'none'}}>

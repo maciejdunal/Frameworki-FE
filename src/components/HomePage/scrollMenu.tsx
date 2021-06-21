@@ -15,7 +15,6 @@ const Content = styled.div`
     border-radius:10px;
   }
 `
-
 const list: any[] = [
     { name: supplierContract },
     { name: projectSignoff2 },
@@ -25,11 +24,12 @@ const list: any[] = [
     { name: supplierContract },
     { name: projectSignoff2 },
 ];
-
 const MenuItem = ({text, selected}: {text: any, selected: any}) => {
-    return <a href={"Workspace"+'selected lsit item'}><div
-        className={`menu-item ${selected ? 'active' : ''}`}
-    ><img style={{ boxShadow: "0px 2px #d8dbe1", borderLeft: "1px solid #d8dbe1", borderRight: "1px solid #d8dbe1"}} src={text}></img></div></a>;
+
+    return <div className={`menu-item ${selected ? 'active' : ''}`}>
+        <a href={'/'+ ''}><img style={{ boxShadow: "0px 2px #d8dbe1", borderLeft: "1px solid #d8dbe1", borderRight: "1px solid #d8dbe1"}} src={text}></img>
+        </a>
+        </div>;
 };
 
 export const Menu = (list: any[], selected: any) =>
