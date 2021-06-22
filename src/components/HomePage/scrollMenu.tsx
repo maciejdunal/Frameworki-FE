@@ -16,18 +16,18 @@ const Content = styled.div`
   }
 `
 const list: any[] = [
-    { name: supplierContract },
-    { name: projectSignoff2 },
-    { name: projectSignoff2 },
-    { name: supplierContract },
-    { name: supplierContract },
-    { name: supplierContract },
-    { name: projectSignoff2 },
+    { name: supplierContract, link:'supplierContract' },
+    { name: projectSignoff2, link:'projectSignoff2' },
+    { name: projectSignoff2, link:'projectSignoff2'},
+    { name: supplierContract, link:'supplierContract' },
+    { name: supplierContract, link:'supplierContract' },
+    { name: supplierContract, link:'supplierContract' },
+    { name: projectSignoff2, link:'projectSignoff2' },
 ];
-const MenuItem = ({text, selected}: {text: any, selected: any}) => {
+const MenuItem = ({text, selected, link}: {text: any, selected: any, link: any}) => {
 
     return <div className={`menu-item ${selected ? 'active' : ''}`}>
-        <a href={'/'+ ''}><img style={{ boxShadow: "0px 2px #d8dbe1", borderLeft: "1px solid #d8dbe1", borderRight: "1px solid #d8dbe1"}} src={text}></img>
+        <a href={'/'+ link}><img style={{ boxShadow: "0px 2px #d8dbe1", borderLeft: "1px solid #d8dbe1", borderRight: "1px solid #d8dbe1"}} src={text}></img>
         </a>
         </div>;
 };
@@ -36,7 +36,7 @@ export const Menu = (list: any[], selected: any) =>
     list.map((el) => {
         const {name} = el;
 
-        return <MenuItem text={name} selected={selected} />;
+        return <MenuItem text={name} selected={selected} link={el.link} />;
     });
 
 

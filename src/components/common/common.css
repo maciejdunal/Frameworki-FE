@@ -10,3 +10,18 @@
 #searchbar:-moz-placeholder { /* Firefox 18- */
     padding-left: 8px;
 }
+
+/*Top Bar*/
+
+#topsSearchBar::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    padding-left: 40%;
+}
+#topsSearchBar::-moz-placeholder { /* Firefox 19+ */
+    padding-left: 40%;
+}
+#topsSearchBar:-ms-input-placeholder { /* IE 10+ */
+    padding-left: 40%;
+}
+#topsSearchBar:-moz-placeholder { /* Firefox 18- */
+    padding-left: 40%;
+}

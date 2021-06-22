@@ -1,8 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import "../common/common.css"
-import { Wrapper } from '../../styledHelpers/Components';
-import { Colors } from '../../styledHelpers/Colors';
 import { fontSize } from '../../styledHelpers/FontSizes'
 import { Badge } from '@material-ui/core';
 import { ExpandedMenu } from './ExpandedMenu';
@@ -18,12 +16,12 @@ import house2 from '../../media/icons/house2.svg'
 
 const HPWrapper = styled.div`
   font-family: "Calvin-Medium";
-  
+  margin-top:5px;
   background: white;
 `;
 
 const InnerWrapper = styled.div`
-  height: 45px; 
+  height: 50px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +56,8 @@ const LeftLogo = styled.div`
 
 const SearchField = styled.div`
   width: 100%;
-  min-width:650px;
+  margin-left: 20%;
+  min-width:800px;
   padding: 8px;
 `;
 
@@ -68,8 +67,8 @@ const SearchButton = styled.div`
   padding: 3px;
   font-size: 30px;
   cursor: pointer;
-  margin-top: 7px;
-  margin-left: 33.5%;
+  margin-top: 11px;
+  margin-left: 44.7%;
   position: absolute;
 `;
 
@@ -127,18 +126,18 @@ export const TopBar: FC = () => {
 
                 <InputWrapper>
                     <SearchField>
-                        <input type="text" id="searchbar" placeholder="Search Legalcluster" style={{width:'100%', height:'25px', borderRadius: '5px', border: '1px solid #eaeaea '}}/>
+                        <input type="text" id="topsSearchBar" placeholder="Search Legalcluster" style={{width:'100%', height:'32px', borderRadius: '5px', border: '1px solid #eaeaea '}}/>
                     </SearchField>
 
                     <SearchButton>
-                        <img src={search} alt="search" />
+                        <img src={search} alt="search"/>
                     </SearchButton>
                 </InputWrapper>
             <RightSide>
                 <RSIcons>
                     <a href="/HomePage"><img style={{cursor:'pointer'}} src={house} alt="house"/></a>
-                    <Badge color="secondary" badgeContent={9} showZero><img style={{cursor:'pointer'}} src={comments} alt="comments"/></Badge>
-                    <Badge color="secondary" badgeContent={3} showZero><img style={{cursor:'pointer'}} src={bell} alt="bell"/></Badge>
+                    <Badge color="secondary" badgeContent={5}><img style={{cursor:'pointer', height:'25px'}} src={comments} alt="comments"/></Badge>
+                    <Badge color="secondary" badgeContent={0} showZero><img style={{cursor:'pointer', height:'25px'}} src={bell} alt="bell"/></Badge>
                 </RSIcons>
             </RightSide>
             </InnerWrapper>

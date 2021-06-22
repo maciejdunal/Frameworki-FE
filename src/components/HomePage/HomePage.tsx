@@ -45,16 +45,25 @@ const RYW = styled.div`
   font-family: "Calvin-Medium";
   margin-top: 2%;
   margin-left: 4%;
+  
+`;
 
-
+const RYW2 = styled.div`
+  font-family: "Calvin-Medium";
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 86%;
 `;
 const SearchField = styled.div`
   margin-left: 46.7%;
   position: absolute;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const SearchButton = styled.div`
-  margin-left: 55%;
+  margin-left: 85%;
   margin-top:3px;
   padding: 3px;
   font-size: 20px;
@@ -63,16 +72,17 @@ const SearchButton = styled.div`
 `;
 const MenuWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
   cursor: pointer;
   position: relative;
+  width: 135px;
   align-items: center;
-  width: 90px;
-  justify-content: space-between;
   margin-left: 80%;
-  margin-top: -20px;
+  //margin-top: -20px;
 `;
 const RightSide = styled.div`
-  //display: flex;
+  display: flex;
+  justify-content: space-between;
 `;
 
 
@@ -133,41 +143,41 @@ export const HomePage: FC = () => {
                 {/*1*/}
 
                 <img src={projectSignoff} alt={supplierContract}
-                     style={{height: '9%', width: '4.5%', position: 'absolute', marginLeft: '1.1%', marginTop: '2.1%'}}/>
-                <a style={{fontSize: '20px', position: 'absolute', marginLeft: '6.5%', marginTop: '2.5%', color: 'darklategrey'}}>Lorem inpsum
+                     style={{height: '8%', width: '4.5%', position: 'absolute', marginLeft: '1.1%', marginTop: '2.1%'}}/>
+                <a style={{fontSize: '21px', position: 'absolute', marginLeft: '6.5%', marginTop: '2.4%', color: 'darklategrey'}}>Lorem inpsum
                     dolor sit amet, consecteur adipisiscing elit... and one <br/> more line for the demo</a>
-                <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '130px', marginTop: '100px'}}>7 jan.
+                <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '6.5%', marginTop: '100px'}}>7 jan.
                     2020 <a style={{color: "#7f838f", marginLeft:"35px"}}></a>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '10.4%', marginTop: '5%'}}/>
+                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '9.8%', marginTop: '4.45%'}}/>
                 {/*2*/}
 
                 <img src={projectSignoff} alt={supplierContract}
-                     style={{height: '9%', width: '4.5%', position: 'absolute', marginLeft: '1.1%', marginTop: '7.4%'}}/>
-                <a style={{fontSize: '20px', position: 'absolute', marginLeft: '6.5%', marginTop: '150px', color: 'darkslategrey'}}>Lorem inpsum
+                     style={{height: '8%', width: '4.5%', position: 'absolute', marginLeft: '1.1%', marginTop: '6.85%'}}/>
+                <a style={{fontSize: '21px', position: 'absolute', marginLeft: '6.5%', marginTop: '150px', color: 'darkslategrey'}}>Lorem inpsum
                     dolor sit amet, consecteur adipisiscing elit... and one <br/> more line for the demov</a>
-                <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '130px', marginTop: '198px'}}>7 jan.
-                    2020 <a style={{color: "red", marginLeft:"35px"}}></a>John Doe</a>
+                <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '6.5%', marginTop: '198px'}}>7 jan.
+                    2020 <a style={{marginLeft:"35px"}}></a>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '10.4%', marginTop: '195px'}}/>
+                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '9.8%', marginTop: '9.15%'}}/>
                 {/*3*/}
 
                 <img src={projectSignoff} alt={supplierContract}
-                     style={{height: '9%', width: '4.5%', position: 'absolute', marginLeft: '1.1%', marginTop: '240px'}}/>
-                <a style={{fontSize: '20px', position: 'absolute', marginLeft: '130px', marginTop: '250px', color: 'darkslategrey'}}>Lorem inpsum
+                     style={{height: '8%', width: '4.5%', position: 'absolute', marginLeft: '1.1%', marginTop: '11.6%'}}/>
+                <a style={{fontSize: '21px', position: 'absolute', marginLeft: '130px', marginTop: '250px', color: 'darkslategrey'}}>Lorem inpsum
                     dolor sit amet, consecteur adipisiscing elit... and one <br/> more line for the demo</a>
-                <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '130px', marginTop: '298px'}}>7 jan.
+                <a style={{color: "#7f838f", fontSize: '14px', position: 'absolute', marginLeft: '6.5%', marginTop: '298px'}}>7 jan.
                     2020 <a style={{marginLeft:"35px", color: 'darkslategrey'}}></a>John Doe</a>
                 <img src={profile} alt={profile} height="20xp"
-                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '10.4%', marginTop: '295px'}}/>
+                     style={{borderRadius: '20px', position: 'absolute', marginLeft: '9.8%', marginTop: '13.85%'}}/>
 
 
 
                 <a style={{
                     fontSize: '16px',
                     position: 'absolute',
-                    marginTop: '340px',
-                    marginLeft: '22px',
+                    marginTop: '345px',
+                    marginLeft: '23px',
                     color:'#2678ba',
                     fontFamily: "Calvin-Medium",
 
@@ -188,39 +198,39 @@ export const HomePage: FC = () => {
                 </WSSmenu>
 
             </WorkSpaces>
-            {/*<ResumeYourWork>*/}
             <RYW>
+<RYW2>
                 <h1 style={{
                     fontSize: '22px',
                     color: 'darkslategrey',
                     fontFamily: "Calvin-Medium",
                     marginLeft:'2%',
                     paddingBottom:'1%',
-                    minWidth:'11.67%'
+                    minWidth:'200px'
                 }}>Resume Your Work</h1>
 
                 <SearchField>
                     <input type="text" id="searchbar" placeholder="Filter by title..." style={{width:'100%', height:'25px', borderRadius: '5px', border: '1px solid #eaeaea '}}/>
+                    <SearchButton>
+                        <img src={search} alt="search" style={{height:'15px'}}/>
+                    </SearchButton>
                 </SearchField>
 
-                <SearchButton>
-                    <img src={search} alt="search" style={{height:'15px'}}/>
-                </SearchButton>
+
 
                 <MenuWrapper ref={wrapperRef}>
                     <RightSide onClick={menuHandler}>
-                        <img src={followed2} alt="followed2" style={{width:'35px'}}/>
-                        <span style={{fontSize: '19px', color:'#2678ba'}}>Followed</span>
+                        <img src={followed2} alt="followed2" style={{width:'35px', marginRight:'8px'}}/>
+                        <span style={{fontSize: '19px', color:'#2e429f', marginTop:'5%', margin: '4px'}}>Followed</span>
                     </RightSide>
-                    <img onClick={menuHandler} src={arrowdown} alt="arrow" style={{marginTop:"20px", color:'#2678ba'}}/>
+                    <img onClick={menuHandler} src={arrowdown} alt="arrow" style={{marginTop:"0px", color:'#2678ba', marginLeft:'3px'}}/>
                     {dropdownOpen &&
                     <ExpandedMenu/>
                     }
                 </MenuWrapper>
+</RYW2>
                 <Paginate />
             </RYW>
-
-            {/*</ResumeYourWork>*/}
         </Wrapper>
     );
 }

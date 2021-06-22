@@ -75,7 +75,7 @@ export const LeftMenu: FC = () => {
                 <NameAndTitle>
                     <div>
                         <button style={{background:'white', border:'none', cursor: 'pointer', outline:'none'}}>
-                            <h1 style={{color:'#2678ba', fontSize:'18px', fontWeight: "bold", fontFamily: "Calvin-Medium"}}>Humberta Swift</h1>
+                            <a href="/Profile" style={{color:'#2678ba', fontSize:'18px', fontWeight: "bold", fontFamily: "Calvin-Medium"}}>Humberta Swift</a>
                         </button>
                     </div>
                     <div>

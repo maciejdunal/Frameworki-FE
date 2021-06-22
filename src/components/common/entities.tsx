@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '../../styledHelpers/Components';
-import all from '../../media/icons/all.png';
+import all from '../../media/icons/all.jpg';
 import filters from '../../media/icons/filters.jpg';
 import threedotsbutton from '../../media/icons/3dots.jpg';
 import mosaic from '../../media/icons/mosaic.jpg';

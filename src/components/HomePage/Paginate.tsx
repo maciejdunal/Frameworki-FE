@@ -3,6 +3,18 @@ import axios from 'axios'
 import ReactPaginate from 'react-paginate';
 import "./HomePage.css"
 import conFooter from '../../media/images/conFooter.png';
+import styled from "styled-components";
+import {Wrapper} from '../../styledHelpers/Components';
+
+const Contracts = styled.div`
+  border-radius:6px; 
+  margin-top:10px; 
+  background-color:white;
+  max-width: 93.7%;
+  box-shadow: 0px 2px #d8dbe1;
+  border-left: 1px solid #d8dbe1;
+  border-right: 1px solid #d8dbe1;
+`;
 
 interface isState {
 
@@ -14,10 +26,8 @@ interface isState {
     pageCount: any
     postData: any
     currentPage: any
-
-
-
 }
+
 export default class Paginate extends React.Component <{}, any,isState> {
     constructor(props: any) {
         super(props);
@@ -39,9 +49,13 @@ export default class Paginate extends React.Component <{}, any,isState> {
                 const data = res.data;
                 const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
                 const postData = slice.map((pd: any) => <React.Fragment>
-                    <p style={{position:'absolute', fontSize:'25px', color:'#2678ba', marginLeft:'20px', marginTop:'20px'}}>Contract #{pd.id}</p>
-                <p style={{position:"absolute", fontSize:'20px', marginTop:'50px', marginLeft:"20px", color:'gray', wordWrap:'break-word',maxWidth:'1000px'}}>{pd.body}</p>
-                <img style={{borderRadius:'5px', marginTop:'10px', border:'1px solid grey'}} src={conFooter} alt={conFooter}/>
+                    <Wrapper>
+                    <Contracts>
+                            <p style={{position:'absolute', fontSize:'24px', color:'#2678ba', marginLeft:'20px', marginTop:'20px'}}>Contract #{pd.id}</p>
+                            <p style={{position:"absolute", fontSize:'18px', marginTop:'50px', marginLeft:"20px", color:'gray', wordWrap:'break-word', maxWidth:'60%'}}>{pd.body}</p>
+                            <img style={{borderRadius:'5px', marginTop:'10px', height:'110px'}} src={conFooter} alt={conFooter}/>
+                        </Contracts>
+                    </Wrapper>
                 </React.Fragment>)
 
                 this.setState({
@@ -69,7 +83,7 @@ export default class Paginate extends React.Component <{}, any,isState> {
     }
     render() {
         return (
-            <div style={{marginLeft:'180px', marginTop:'50px'}}>
+            <div>
         {this.state.postData}
         <ReactPaginate
             previousLabel={"PREVIOUS"}
@@ -82,7 +96,7 @@ export default class Paginate extends React.Component <{}, any,isState> {
             onPageChange={this.handlePageClick}
             containerClassName={"paginate"}
             activeClassName={"active"}/>
-        </div>
+            </div>
 
     )
     }
