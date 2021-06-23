@@ -1,13 +1,12 @@
 import React, {FC} from 'react';
-import add from '../../media/icons/addToACluster.png';
+import add from '../../media/icons/createARequest.jpg';
 import attachment from '../../media/icons/attachment.png';
-import req from '../../media/icons/createARequest.png';
+import req from '../../media/icons/req.png';
 import message from '../../media/icons/message.png';
 import pencil from '../../media/icons/pencil.png';
 import x from '../../media/icons/x.png';
 import styled from "styled-components";
 import profile from '../../media/icons/profile-example.png';
-import { Input } from 'semantic-ui-react'
 
 const Wrapper = styled.div`;
   font-family: "Calvin-Medium";
@@ -29,32 +28,79 @@ const SeeProfile = styled.div`;
   border-bottom: 1px solid #d8dbe1;
 `;
 
+
+function editContent() {
+    var elements = document.getElementsByClassName("firstInputs");
+    let elementById = document.getElementById('pencil');
+    for(const x of elements as any){
+        if (x.readOnly == "false") {
+            x.readOnly = "true";
+
+           // elementById.innerHTML = "Enable content of p to be editable!";
+        }
+        else {
+            x.readOnly = "false";
+        }
+    }
+}
+
+
+
+
+
 export const Profile: FC = () => {
+
+
+
+
+    // @ts-ignore
     return (
         <Wrapper>
+
             <SeeProfile>
-                <div style={{width:'20%', textAlign:'center', display:"inline-grid"}}>
-                    <img src = {profile} alt={profile} height="70px" style={{borderRadius:'70px', marginTop:"55%", marginLeft:'27%'}} />
+                <div style={{width: '20%', textAlign: 'center', display: "inline-grid"}}>
+                    <img src={profile} alt={profile} height="70px"
+                         style={{borderRadius: '70px', marginTop: "55%", marginLeft: '27%'}}/>
                     <a style={{color: '#6ca9b9', fontSize: '14px', marginTop: '-5%'}}>See Profile</a>
                 </div>
-                <div style={{width:'80%', display:"inline-grid"}}>
-                    <div style={{maxHeight:"30px", marginTop:'3%'}}>
-                        <img src = {message} alt={message} height="70px" style={{left:'0',maxHeight:"19px", maxWidth:'25%'}} />
-                        <img src = {req} alt={req} height="70px" style={{marginLeft:'5%',maxHeight:"20px",maxWidth:'25%'}} />
-                        <img src = {add} alt={add} height="70px" style={{marginLeft:'5%',maxHeight:"19px", maxWidth:'25%'}} />
-                        <img src = {x} alt={x} height="70px" style={{marginLeft:'14%',maxHeight:"15px"}} />
-                    </div>
-                    <div style={{display:'flex'}}>
-                        <div className="ui transparent input">
-                            <input value="Humberta">
 
-                            </input>
-                            <h1>Clifford Chance</h1>
+                <div style={{width: '80%', display: "inline-grid"}}>
+                    <div style={{maxHeight: "30px", marginTop: '3%'}}>
+
+                        <div style={{display: 'inline-block'}}>
+                            <img src={message} alt={message} style={{height: '22px', width: '22px'}}/>
+                            <div style={{marginLeft: '30px', marginTop: '-23px', fontSize: '22px'}}>Message</div>
+                        </div>
+
+
+                        <div style={{display: 'inline-block'}}>
+                            <img src={req} alt={req} style={{marginLeft: '24px', height: '25px', width: '25px'}}/>
+                            <div style={{marginLeft: '55px', marginTop: '-26px', fontSize: '22px'}}>Create a request
+                            </div>
+                        </div>
+
+                        <div style={{display: 'inline-block'}}>
+                            <img src={add} alt={add} style={{marginLeft: '24px', height: '25px', width: '25px'}}/>
+                            <div style={{marginLeft: '62px', marginTop: '-25px', fontSize: '22px'}}>Add to a cluster
+                            </div>
+                        </div>
+
+                        <div style={{display: 'inline-grid'}}>
+                            <img src={x} alt={x} style={{marginLeft: '190px', height: '15px', width: '15px'}}/>
+                        </div>
+                    </div>
+
+                    <div style={{display: 'flex'}}>
+                        <div>
+                           <input type='text' disabled={true} className="firstInputs" style={{height:'25px', border:'none', backgroundColor:'#e6f0f3', borderRadius:'5px', fontSize:'20px', color:'#7db3c1', width:'150px'}}></input>
+                            <input></input>
                             <h1>New-york</h1>
                             <h1>Partner</h1>
                         </div>
-                        <div style={{marginLeft:'60%'}}>
-                            <img src = {pencil} alt={pencil} height="70px" style={{marginLeft:'77%',maxHeight:'20px', marginBottom:'5px', padding:'15%'}} />
+                        <div style={{marginLeft: '60%'}}>
+                            {/*<button id="pencil"  onClick={() => editContent()} style={{marginLeft: '77%', maxHeight: '20px', marginBottom: '15px', padding: '15%'}}/>*/}
+                           <input id="pencil" type="image" src={pencil} onClick={(event:any) => editContent()}
+                                   style={{marginLeft: '31.5%', maxHeight: '20px', marginBottom: '30px', padding: '15%'}}/>
                             <h1>humbertaswift@gmail.com</h1>
                             <h1>+33 (0)6 12 34 56 78</h1>
                         </div>
@@ -63,4 +109,8 @@ export const Profile: FC = () => {
             </SeeProfile>
         </Wrapper>
     );
-}
+};
+
+
+
+
