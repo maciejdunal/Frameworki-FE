@@ -23,6 +23,8 @@ import {YourNetwork} from "../common/yourNetwork";
 import {YourPublications} from "../common/yourPublications";
 import {Publications} from "../common/publications";
 import {Ecosystem} from "../common/ecosystem";
+import {Clientcontract} from "../common/Workspaces/Clientcontract"
+
 
 const Content = styled.div`
   height: 1000px;
@@ -57,6 +59,9 @@ const MainPage: FC = () => {
                         </Route>
                         <Route path="/profile" exact>
                             <Profile/>
+                        </Route>
+                        <Route path="/clientcontract" exact>
+                            <Clientcontract/>
                         </Route>
 
                         <HomePage/>

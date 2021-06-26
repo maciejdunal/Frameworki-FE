@@ -1,10 +1,10 @@
 import React from 'react'
 import axios from 'axios'
 import ReactPaginate from 'react-paginate';
-import "./HomePage.css"
-import conFooter from '../../media/images/conFooter.png';
+import "../../HomePage/HomePage.css"
+import conFooter from '../../../media/images/conFooter.png';
 import styled from "styled-components";
-import {Wrapper} from '../../styledHelpers/Components';
+import {Wrapper} from '../../../styledHelpers/Components';
 
 const Contracts = styled.div`
   border-radius:6px; 
@@ -50,8 +50,8 @@ export default class Paginate extends React.Component <{}, any,isState> {
                 const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
                 const postData = slice.map((pd: any) => <React.Fragment>
                     <Wrapper>
-                    <Contracts>
-                            <p style={{position:'absolute', fontSize:'24px', color:'#2678ba', marginLeft:'20px', marginTop:'20px'}}>Contract #{pd.id}</p>
+                        <Contracts>
+                            <p style={{position:'absolute', fontSize:'24px', color:'#2678ba', marginLeft:'20px', marginTop:'20px'}}>World Company MENA SARL #{pd.id}</p>
                             <p style={{position:"absolute", fontSize:'18px', marginTop:'50px', marginLeft:"20px", color:'gray', wordWrap:'break-word', maxWidth:'60%'}}>{pd.body}</p>
                             <img style={{borderRadius:'5px', marginTop:'10px', height:'110px'}} src={conFooter} alt={conFooter}/>
                         </Contracts>
@@ -84,20 +84,20 @@ export default class Paginate extends React.Component <{}, any,isState> {
     render() {
         return (
             <div>
-        {this.state.postData}
-        <ReactPaginate
-            previousLabel={"PREVIOUS"}
-            nextLabel={"NEXT"}
-            breakLabel={"..."}
-            breakClassName={"break-me"}
-            pageCount={10}
-            marginPagesDisplayed={1}
-            pageRangeDisplayed={3}
-            onPageChange={this.handlePageClick}
-            containerClassName={"paginate"}
-            activeClassName={"active"}/>
+                {this.state.postData}
+                <ReactPaginate
+                    previousLabel={"PREVIOUS"}
+                    nextLabel={"NEXT"}
+                    breakLabel={"..."}
+                    breakClassName={"break-me"}
+                    pageCount={10}
+                    marginPagesDisplayed={1}
+                    pageRangeDisplayed={3}
+                    onPageChange={this.handlePageClick}
+                    containerClassName={"paginate"}
+                    activeClassName={"active"}/>
             </div>
 
-    )
+        )
     }
 }

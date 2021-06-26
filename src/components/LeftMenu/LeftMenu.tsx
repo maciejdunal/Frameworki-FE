@@ -87,24 +87,24 @@ export const LeftMenu: FC = () => {
             <InnerWrapper2>
                 <YourNetwork>
                     <div style={{marginLeft:'5px', background:"white"}}>
-                        <button style={{background:'white', border: 'none', cursor:'pointer', }}>
-                            <img src = {network} alt = {network} style={{marginTop:'1px', outline:'none'}}/>
+                        <button onClick={()=>alert('not implemented')} style={{background:'white', border: 'none', cursor:'pointer', }}>
+                            <img  src = {network} alt = {network} style={{marginTop:'1px', outline:'none'}}/>
                             <a style={{color:"#555b70", marginLeft:'14px', fontSize:'20px', fontFamily: "Calvin-Medium"}}>Your Network</a>
                         </button>
 
-                        <button style={{width:'33px', marginLeft:'30%', cursor: 'pointer', background:'white', height:'23px', borderRadius:'5px', outline:'none'}}>
+                        <button onClick={()=>alert('not implemented')} style={{width:'33px', marginLeft:'30%', cursor: 'pointer', background:'white', height:'23px', borderRadius:'5px', outline:'none'}}>
                             <img src = {userPlus} alt = {userPlus} style={{marginTop:"2px", marginLeft:"2px"}}/>
                         </button>
                     </div>
                 </YourNetwork>
                 <YourPublications>
                     <div style={{marginLeft:'5px'}}>
-                        <button style={{background:'white', border:'none', cursor:'pointer', outline:'none' }}>
+                        <button onClick={()=>alert('not implemented')} style={{background:'white', border:'none', cursor:'pointer', outline:'none' }}>
                             <img src = {publications} alt = {publications}/>
                             <a style={{color:"#555b70", marginLeft:'16px', fontSize:'20px', fontFamily: "Calvin-Medium"}}>Your Publications</a>
                         </button>
 
-                        <button style={{width:'33px', marginLeft:'22%', cursor: 'pointer', background:'white', height:'23px', borderRadius:'5px', outline:'none'}}>
+                        <button onClick={()=>alert('not implemented')} style={{width:'33px', marginLeft:'22%', cursor: 'pointer', background:'white', height:'23px', borderRadius:'5px', outline:'none'}}>
                             <img src = {plus} alt = {plus} style={{marginTop:"1px"}}/>
                         </button>
                     </div>

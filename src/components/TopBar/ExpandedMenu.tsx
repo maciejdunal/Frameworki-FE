@@ -15,7 +15,7 @@ import profile from "../../media/icons/profile-example.png";
 
 
 const Wrapper = styled.div`
-  top: 43px;
+  top: 52px;
   left: 0;
   position: absolute;
   z-index: 1;
@@ -42,7 +42,7 @@ export const ExpandedMenu: FC = () => {
                 <input style={{margin:'5%', width:'80%'}} type="text" placeholder="Search"  value={inputText}
                        onChange={inputHandler}/><br/>
                 <label
-                    style={{color: '#969A9F', fontSize: '13px', fontWeight: 'bold', padding: '14px'}}>Platform</label>
+                    style={{color: '#969A9F', fontSize: '13px', fontWeight: 'bold', padding: '14px', width:'100%'}}>Platform</label>
                 {'Home'.toLowerCase().includes(inputText.toLowerCase()) &&
                 <li style={{
                     paddingTop: '5px',
@@ -94,18 +94,19 @@ export const ExpandedMenu: FC = () => {
                         style={{paddingLeft: '14px', paddingRight: '13px', verticalAlign: 'text-bottom'}}/>Administration
                 </li>}
                 <label
-                    style={{color: '#969A9F', fontSize: '13px', fontWeight: 'bold', padding: '14px'}}>Workspaces</label>
+                    style={{color: '#969A9F', fontSize: '13px', fontWeight: 'bold', padding: '14px', width:'100%'}}>Workspaces</label>
                 {'Client conract'.toLowerCase().includes(inputText.toLowerCase()) &&
-                <li style={{
+                <a href="/clientContract" style={{textDecoration:'none'}}><li style={{
                     paddingTop: '5px',
                     paddingBottom: '5px',
                     color: 'darkslategrey',
                     fontWeight: 'bold',
                     fontSize: '17px'
-                }}><img src={entities2} alt={entities2}
-                        style={{paddingLeft: '14px', paddingRight: '13px', verticalAlign: 'text-bottom'}}/>Client
-                    conract
-                </li>}
+                }}><img  src={entities2} alt={entities2}
+                           style={{paddingLeft: '14px', paddingRight: '13px', verticalAlign: 'text-bottom'}}/>
+                        Client
+                    contract
+                </li></a>}
                 {'Supplier contract'.toLowerCase().includes(inputText.toLowerCase()) &&
                 <li style={{
                     paddingTop: '5px',
