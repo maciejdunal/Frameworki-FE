@@ -24,7 +24,7 @@ import {YourPublications} from "../common/yourPublications";
 import {Publications} from "../common/publications";
 import {Ecosystem} from "../common/ecosystem";
 import {Clientcontract} from "../common/Workspaces/Clientcontract"
-
+import {SupplierContract} from "../common/Workspaces/SupplierContract";
 
 const Content = styled.div`
   height: 1000px;
@@ -60,8 +60,11 @@ const MainPage: FC = () => {
                         <Route path="/profile" exact>
                             <Profile/>
                         </Route>
-                        <Route path="/clientcontract" exact>
+                        <Route path="/Clientcontract" exact>
                             <Clientcontract/>
+                        </Route>
+                        <Route path="/SupplierContract" exact>
+                            <SupplierContract/>
                         </Route>
 
                         <HomePage/>

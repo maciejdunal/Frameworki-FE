@@ -68,7 +68,7 @@ const SearchButton = styled.div`
   font-size: 30px;
   cursor: pointer;
   margin-top: 11px;
-  margin-left: 44.7%;
+  margin-left: 49.7%;
   position: absolute;
 `;
 

@@ -3,7 +3,7 @@ import ScrollMenu from 'react-horizontal-scrolling-menu';
 import './HomePage.css';
 
 import supplierContract from '../../media/images/supplierContract.png';
-import projectSignoff2 from '../../media/images/projectSignoff2.png';
+import clientContract from '../../media/images/clientContract.png';
 import styled from "styled-components";
 // list of items
 
@@ -17,12 +17,12 @@ const Content = styled.div`
 `
 const list: any[] = [
     { name: supplierContract, link:'supplierContract' },
-    { name: projectSignoff2, link:'projectSignoff2' },
-    { name: projectSignoff2, link:'projectSignoff2'},
+    { name: clientContract, link:'clientContract' },
+    { name: clientContract, link:'clientContract'},
     { name: supplierContract, link:'supplierContract' },
     { name: supplierContract, link:'supplierContract' },
     { name: supplierContract, link:'supplierContract' },
-    { name: projectSignoff2, link:'projectSignoff2' },
+    { name: clientContract, link:'clientContract' },
 ];
 const MenuItem = ({text, selected, link}: {text: any, selected: any, link: any}) => {
 

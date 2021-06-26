@@ -16,7 +16,7 @@ import structureWS from "../../../media/icons/structureWS.jpg";
 import defineWS from "../../../media/icons/defineWS.jpg";
 import entities from "../../../media/icons/entities.png";
 import cog from "../../../media/icons/cog.png";
-import clientconract from "../../../media/images/corporate.png";
+import supplierconract from "../../../media/images/supplierContractimage.png";
 import PaginateWS from "./PaginateWS"
 import followed2 from "../../../media/icons/followed2.png";
 import arrowdown from "../../../media/icons/arrow-down.png";
@@ -49,7 +49,7 @@ const StartWorking = styled.div`
   border-top: 2px solid #d8dbe1;
 `;
 
-const ClientContract = styled.div`
+const SupplierContractx = styled.div`
   background-color: white;
   margin-left: 200px;
   width: 1000px;
@@ -128,7 +128,7 @@ const RightSide = styled.div`
   justify-content: space-between;
 `;
 
-export const Clientcontract: FC = () => {
+export const SupplierContract: FC = () => {
     const [wrapperRef, dropdownOpen, toggleDropDown] = useDropdown();
 
     const menuHandler = () => {
@@ -136,20 +136,20 @@ export const Clientcontract: FC = () => {
     }
     return (
         <Wrapper>
-            <ClientContract>
+            <SupplierContractx>
                 <Image style={{borderRadius:'5px'}}>
-                    <img style={{borderTopRightRadius:'5px', borderTopLeftRadius:'5px'}} src = {clientconract} alt = {clientconract}/>
+                    <img style={{borderTopRightRadius:'5px', borderTopLeftRadius:'5px'}} src = {supplierconract} alt = {supplierconract}/>
 
                 </Image>
 
                 <TopT>
                     <img style={{height:'50px', marginLeft:'20px', marginTop:'20px'}} src = {entities} alt = {entities}/>
-                    <a style={{fontSize:'25px',position:'absolute', marginTop:'10px', marginLeft:'20px'}}>Client contract</a>
+                    <a style={{fontSize:'25px',position:'absolute', marginTop:'10px', marginLeft:'20px'}}>Supplier contract</a>
                     <img style={{height:'20px', position:'absolute', marginTop:'10px', marginLeft:'900px'}} src={cog} alt={cog}/>
                     <a style={{fontSize:'15px', marginLeft:'23px', color:'#9b9ea2'}}>Workspace purpose and a bit of context. This much needed description is here to remind people where they are, if they are new or have poor memory.</a>
                 </TopT>
 
-            </ClientContract>
+            </SupplierContractx>
 
             <StartWorking>
                 <br/><a style={{fontSize:'15px',fontWeight:'bold', marginLeft:'30px', marginTop:'10px', color:'#9b9ea2', fontFamily: "Arial"}}>Start working on corporate matters</a>

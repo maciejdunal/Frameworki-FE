@@ -2,18 +2,19 @@ import React from 'react'
 import axios from 'axios'
 import ReactPaginate from 'react-paginate';
 import "../../HomePage/HomePage.css"
-import conFooter from '../../../media/images/conFooter.png';
+import conFooter from '../../../media/images/conFooterWS.png';
 import styled from "styled-components";
 import {Wrapper} from '../../../styledHelpers/Components';
 
 const Contracts = styled.div`
-  border-radius:6px; 
-  margin-top:10px; 
+
+  margin-top:10px;
+  margin-left:2%;
   background-color:white;
-  max-width: 93.7%;
-  box-shadow: 0px 2px #d8dbe1;
-  border-left: 1px solid #d8dbe1;
-  border-right: 1px solid #d8dbe1;
+  max-width: 97%;
+  min-height: 100px;
+  border: 1px solid #d8dbe1;
+
 `;
 
 interface isState {
@@ -28,7 +29,7 @@ interface isState {
     currentPage: any
 }
 
-export default class Paginate extends React.Component <{}, any,isState> {
+export default class PaginateWS extends React.Component <{}, any,isState> {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -51,9 +52,9 @@ export default class Paginate extends React.Component <{}, any,isState> {
                 const postData = slice.map((pd: any) => <React.Fragment>
                     <Wrapper>
                         <Contracts>
-                            <p style={{position:'absolute', fontSize:'24px', color:'#2678ba', marginLeft:'20px', marginTop:'20px'}}>World Company MENA SARL #{pd.id}</p>
-                            <p style={{position:"absolute", fontSize:'18px', marginTop:'50px', marginLeft:"20px", color:'gray', wordWrap:'break-word', maxWidth:'60%'}}>{pd.body}</p>
-                            <img style={{borderRadius:'5px', marginTop:'10px', height:'110px'}} src={conFooter} alt={conFooter}/>
+                            <p style={{position:'absolute', fontSize:'20px', color:'#2678ba', marginLeft:'20px', marginTop:'20px'}}>World Company MENA SARL #{pd.id}</p>
+                            <p style={{position:"absolute", fontSize:'15px', marginTop:'50px', marginLeft:"20px", color:'#a9acb7', wordWrap:'break-word', maxWidth:'50%'}}>{pd.body}</p>
+                            <img style={{borderRadius:'5px', marginTop:'85px',marginLeft:'15px', height:'25px'}} src={conFooter} alt={conFooter}/>
                         </Contracts>
                     </Wrapper>
                 </React.Fragment>)

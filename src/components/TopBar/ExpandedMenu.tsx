@@ -96,7 +96,7 @@ export const ExpandedMenu: FC = () => {
                 <label
                     style={{color: '#969A9F', fontSize: '13px', fontWeight: 'bold', padding: '14px', width:'100%'}}>Workspaces</label>
                 {'Client conract'.toLowerCase().includes(inputText.toLowerCase()) &&
-                <a href="/clientContract" style={{textDecoration:'none'}}><li style={{
+                <a href="/Clientcontract" style={{textDecoration:'none'}}><li style={{
                     paddingTop: '5px',
                     paddingBottom: '5px',
                     color: 'darkslategrey',
@@ -108,7 +108,7 @@ export const ExpandedMenu: FC = () => {
                     contract
                 </li></a>}
                 {'Supplier contract'.toLowerCase().includes(inputText.toLowerCase()) &&
-                <li style={{
+                <a href="/SupplierContract" style={{textDecoration:'none'}}><li style={{
                     paddingTop: '5px',
                     paddingBottom: '5px',
                     color: 'darkslategrey',
@@ -117,7 +117,7 @@ export const ExpandedMenu: FC = () => {
                 }}><img src={entities2} alt={entities2}
                         style={{paddingLeft: '14px', paddingRight: '13px', verticalAlign: 'text-bottom'}}/>Supplier
                     contract
-                </li>}
+                </li></a>}
                 {'Corporate'.toLowerCase().includes(inputText.toLowerCase()) &&
                 <li style={{
                     paddingTop: '5px',
