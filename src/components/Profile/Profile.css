@@ -6,11 +6,10 @@
     background-color: #e6f0f3;
     border-radius: 5px;
     color: #7db3c1;
-    min-width: 0px;
     margin-right: 1%;
     padding-left: 8px;
-    width: auto;
     margin-top: 6px;
+    size: 5px;
 }
 
 .see-profile2-labels{
@@ -19,5 +18,18 @@
 
 }
 
+.see-profile3{
+    height: 25px;
 
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    color: #5d667e;
+    min-width: 100%;
+    margin-right: 1%;
+    padding-left: 8px;
+
+    margin-top: 6px;
+}
 

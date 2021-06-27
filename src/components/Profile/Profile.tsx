@@ -10,6 +10,10 @@ import styled from "styled-components";
 import profile from '../../media/icons/profile-example.png';
 import userPlus from "../../media/icons/user-plus.png";
 import './Profile.css';
+import attach from '../../media/images/profileAttach.png';
+import userIcon from '../../media/icons/userIcon.png';
+import AutosizeInput from 'react-input-autosize';
+
 
 const Wrapper = styled.div`;
   font-family: "Calvin-Medium";
@@ -42,6 +46,33 @@ const PanelInfo = styled.div`
   display: flex;
   border-bottom: 1px solid #d8dbe1;
 `
+
+const Proposals = styled.div`
+
+  display: flex;
+  border-left: 1px solid #d8dbe1;
+  border-right: 1px solid #d8dbe1;
+  border-bottom: 1px solid #d8dbe1;
+  background-color: white;
+`;
+
+const Reviews = styled.div`
+
+  display: flex;
+  border-left: 1px solid #d8dbe1;
+  border-right: 1px solid #d8dbe1;
+  border-bottom: 1px solid #d8dbe1;
+  background-color: white;
+`;
+const Amount = styled.div`
+
+  display: flex;
+  border-left: 1px solid #d8dbe1;
+  border-right: 1px solid #d8dbe1;
+  border-bottom: 1px solid #d8dbe1;
+  background-color: white;
+`;
+
 
 /*------------------------Edit Funcionts--------------*/
 let pencilSource = pencil;
@@ -156,22 +187,22 @@ export const Profile: FC = () => {
                              style={{marginLeft: '88%', maxHeight: '22px', cursor:'pointer'}}/>
                     </div>
                     <div >
-                        <input type='text' disabled={true} className="see-profile2" defaultValue={'Mergers and acquistion'}></input>
+                        <input type='text' disabled={true} size={17} className="see-profile2" defaultValue={'Mergers and acquistion'}></input>
                     </div>
                     <div className="see-profile2-labels" style={{width:'100%', marginTop:'6px'}}>Specialties</div>
                     <div >
-                        <input type='text' disabled={true} className="see-profile2" defaultValue={'Cross border operation'}></input>
-                        <input type='text' disabled={true} className="see-profile2" defaultValue={'Transation over 500M€/$'}></input>
+                        <input type='text' disabled={true} size={16} className="see-profile2" defaultValue={'Cross border operation'}></input>
+                        <input type='text' disabled={true} size={18} className="see-profile2" defaultValue={'Transation over 500M€/$'}></input>
                     </div>
                     <div className="see-profile2-labels" style={{width:'100%', marginTop:'6px'}}>Admission to practice law</div>
                     <div >
-                        <input type='text' disabled={true} className="see-profile2" defaultValue={'Paris bar association'}></input>
-                        <input type='text' disabled={true} className="see-profile2" defaultValue={'Tunisian bar association'}></input>
+                        <input type='text' disabled={true} size={14} className="see-profile2" defaultValue={'Paris bar association'}></input>
+                        <input type='text' disabled={true} size={17} className="see-profile2" defaultValue={'Tunisian bar association'}></input>
 
                     </div>
                     <div className="see-profile2-labels" style={{width:'100%', marginTop:'6px'}}>Counties</div>
                     <div>
-                        <input type='text' disabled={true} className="see-profile2" defaultValue={'Tunisia'}></input>
+                        <input type='text' size={3} disabled={true} className="see-profile2" defaultValue={'Tunisia'}></input>
 
                     </div>
                 </div>
@@ -179,9 +210,105 @@ export const Profile: FC = () => {
             </SeeProfile2>
 
             <PanelInfo>
+                <div style={{width:'100%'}}>
+                    <div style={{fontWeight:'bold', fontSize:'14px', fontFamily: "Verdana", marginBottom:'20px'}}>Panel informations</div>
+                    <div className="see-profile2-labels" style={{width:'100%'}}>Hourly fee
+                    </div>
+                    <div >
+                        <input type='text' disabled={true} className="see-profile3" defaultValue={'610€/hour (Negociated)'}></input>
+                    </div>
+                    <div className="see-profile2-labels" style={{width:'100%', marginTop:'6px'}}>Terms & conditions</div>
+                    <input type='text' disabled={true} className="see-profile3" defaultValue={'Monthly 10k€ retainer - see with Jeanny Smith'}></input>
+                    <div>
+                        <img src={attach} style={{height:'50px', width:'100%', marginTop:'10px'}}></img>
+                    </div>
+                    <div style={{marginTop:'15px',fontWeight:'bold', fontSize:'14px', fontFamily: "Verdana"}}>Services & Projects</div>
+                    <input type='text' disabled={true} className="see-profile3" defaultValue={'Corporate M&A and international acquistions'}></input>
+                    <div style={{marginTop:'15px',fontWeight:'bold', fontSize:'14px', fontFamily: "Verdana",marginBottom:'10px'}}>Internal correspondants</div>
+
+
+                    <div style={{display:'flex', backgroundColor:'#f5f7f9', alignItems:'center',alignContent:"center", marginBottom:'5px'}}>
+                        <div><img src={profile} style={{borderRadius: '100px', height:'35px', padding:'5px'}}></img></div>
+                        <div style={{marginLeft:'10px', fontWeight:'bold', fontSize:'14px', fontFamily: "Verdana"}}>Firstname Lastname</div>
+                        <div style={{height:'35px', padding:'5px',alignItems:'center', display:'inline-flex' , marginLeft:'18%',color: '#5d667e',fontSize:'20px'}}><img style={{height:'20px', verticalAlign:"middle",marginRight:'5px'}} src={message}></img>Message</div>
+                        <div style={{height:'35px', padding:'5px',alignItems:'center', display:'inline-flex',marginLeft:'14%',color: '#5d667e',fontSize:'20px'}}><img style={{height:'20px', verticalAlign:"middle",marginRight:'5px'}} src={userIcon}></img>Profile</div>
+                    </div>
+                    <div style={{display:'flex', backgroundColor:'#f5f7f9', alignItems:'center',alignContent:"center", marginBottom:'5px'}}>
+                        <div><img src={profile} style={{borderRadius: '100px', height:'35px', padding:'5px'}}></img></div>
+                        <div style={{marginLeft:'10px', fontWeight:'bold', fontSize:'14px', fontFamily: "Verdana"}}>Firstname Lastname</div>
+                        <div style={{height:'35px', padding:'5px',alignItems:'center', display:'inline-flex' , marginLeft:'18%',color: '#5d667e',fontSize:'20px'}}><img style={{height:'20px', verticalAlign:"middle",marginRight:'5px'}} src={message}></img>Message</div>
+                        <div style={{height:'35px', padding:'5px',alignItems:'center', display:'inline-flex',marginLeft:'14%',color: '#5d667e',fontSize:'20px'}}><img style={{height:'20px', verticalAlign:"middle",marginRight:'5px'}} src={userIcon}></img>Profile</div>
+                    </div>
+
+
+                </div>
 
             </PanelInfo>
 
+            <Proposals>
+                <div style={{width:'100%'}}>
+                    <div style={{fontSize:'15px',color: '#5d667e', borderSpacing: '60px 2px'}}>
+                        <div style={{fontWeight:'bold', fontSize:'14px', fontFamily: "Verdana",padding:'15px'}}>Proposals</div>
+                        <div style={{borderBottom: '1px solid #d8dbe1', marginTop:'20px'}}>
+                            <tr style={{height:'2em', fontWeight:'bold', fontSize:'12px', fontFamily: "Verdana"}}>
+                                <th>Name</th><th>Entity</th><th>Location</th><th>Expertise</th><th>Date</th><th>Firm</th>
+                            </tr>
+                        </div>
+                        <div style={{marginTop:'20px'}}>
+                            <tr><td>Operation Ti...</td><td>Renault Co...</td><td>France</td><td>#Tax</td><td>20/01/2018</td><td>Racine</td></tr>
+                            <tr><td>OP. Prometh...</td><td>Renault HQ</td><td>USA</td><td>#M&A</td><td>18/02/2019</td><td>Clifford chance</td></tr>
+                            <tr><td>OP. Latandre</td><td>Renault Br...</td><td>Italia</td><td>#Social</td><td>18/02/2019</td><td>SVZ</td></tr>
+                        </div>
+
+                        <div style={{borderBottom: '1px solid #d8dbe1',paddingBottom:'15px'}}>
+                            <a style={{color:'#76afbe', marginLeft:'84%', cursor: 'pointer'}}>See more proposals</a>
+                        </div>
+                    </div>
+                </div>
+            </Proposals>
+
+            <Reviews>
+                <div style={{width:'100%'}}>
+                    <div style={{fontSize:'15px',color: '#5d667e', borderSpacing: '45px 3px'}}>
+                        <div style={{fontWeight:'bold', fontSize:'14px', fontFamily: "Verdana",padding:'15px'}}>Internal reviews</div>
+                        <div style={{borderBottom: '1px solid #d8dbe1', marginTop:'10px'}}>
+                            <tr style={{height:'2em', fontWeight:'bold', fontSize:'12px', fontFamily: "Verdana"}}>
+                                <th>Name</th><th>Entity</th><th>Location</th><th>Expertise</th><th>Date</th>
+                            </tr>
+                        </div>
+                        <div style={{marginTop:'20px'}}>
+                            <tr><td>Operation Ti...</td><td>Renault Co...</td><td>France</td><th>#Tax</th><th>20/01/2018</th></tr>
+                            <tr><td>OP. Prometh...</td><td>Renault HQ</td><td>USA</td><th>#M&A</th><th>18/02/2019</th></tr>
+                            <tr><td>OP. Latandre</td><td>Renault Br...</td><td>Italia</td><th>#Social</th><th>18/02/2019</th></tr>
+                        </div>
+
+                        <div style={{borderBottom: '1px solid #d8dbe1',paddingBottom:'5px'}}>
+                            <div style={{fontWeight:'bold', fontSize:'13px', fontFamily: "Verdana",padding:'15px'}}>See more Reviews</div>
+                        </div>
+                    </div>
+                </div>
+
+            </Reviews>
+
+            <Amount>
+                <div style={{width:'100%'}}>
+                    <div style={{fontSize:'15px',color: '#5d667e', borderSpacing: '45px 3px'}}>
+                        <div style={{fontWeight:'bold', fontSize:'14px', fontFamily: "Verdana",padding:'15px'}}>Internal reviews</div>
+                        <div style={{borderBottom: '1px solid #d8dbe1', marginTop:'20px'}}>
+                            <tr style={{height:'2em', fontWeight:'bold', fontSize:'12px', fontFamily: "Verdana"}}>
+                                <th style={{marginLeft:'150px'}}>Year</th><th>Cost center</th><th>Total amount</th><th>Law firm</th>
+                            </tr>
+                        </div>
+                        <div style={{marginTop:'20px'}}>
+                            <tr><td>2019</td><td>CS 153</td><td>3 500$</td><th>Clifford chance</th></tr>
+                            <tr><td>2018</td><td>CS 153</td><td>9 500$</td><th>Linklaters</th></tr>
+                            <tr><td>2017</td><td>CS 47</td><td>10 500$</td><th>Linklaters</th></tr>
+                            <tr><td> </td><td>CS 153</td><td>19 500$</td><th>Linklaters</th></tr>
+                            <tr><td> </td><td>CS 32</td><td>15 500$</td><th>Linklaters</th></tr>
+                        </div>
+                    </div>
+                </div>
+            </Amount>
         </Wrapper>
     );
 };

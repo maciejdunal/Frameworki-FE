@@ -70,12 +70,12 @@ export const LeftMenu: FC = () => {
         <Wrapper>
             <InnerWrapper>
                 <Photo>
-                    <img src = {profile} alt={profile} height="70px" style={{borderRadius:'70px', marginTop:"20px"}} />
+                    <a href="/Profile"><img src = {profile} alt={profile} height="70px" style={{borderRadius:'70px', marginTop:"20px"}} /></a>
                 </Photo>
                 <NameAndTitle>
                     <div>
                         <button style={{background:'white', border:'none', cursor: 'pointer', outline:'none'}}>
-                            <a href="/Profile" style={{color:'#2678ba', fontSize:'18px', fontWeight: "bold", fontFamily: "Calvin-Medium"}}>Humberta Swift</a>
+                            <a  style={{color:'#2678ba', fontSize:'18px', fontWeight: "bold", fontFamily: "Calvin-Medium"}}>Humberta Swift</a>
                         </button>
                     </div>
                     <div>
